@@ -7,7 +7,7 @@ const { locale, switchLocale } = useLocale();
 <template>
   <button
     @click="switchLocale"
-    class="hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary rounded-lg border border-gray-400 bg-gray-200 p-2 text-gray-500 hover:cursor-pointer hover:bg-gray-300 dark:border-gray-600 dark:bg-gray-950 dark:text-gray-500 dark:hover:bg-gray-900"
+    class="surface focus-ring hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary p-2 text-gray-500 hover:cursor-pointer hover:bg-gray-300 dark:text-gray-500 dark:hover:bg-gray-900"
   >
     <div class="flex items-center justify-start">
       <LanguageIcon class="h-5 w-5" />

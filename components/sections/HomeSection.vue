@@ -14,7 +14,9 @@
           </div>
 
           <div>
-            <h1 class="text-3xl font-semibold text-gray-800 lg:text-4xl dark:text-gray-200">
+            <h1
+              class="text-3xl leading-tight font-semibold tracking-tight text-balance text-gray-800 lg:text-4xl dark:text-gray-200"
+            >
               {{ $t("home.brand") }}
             </h1>
           </div>
@@ -23,11 +25,9 @@
             href="https://gdg.community.dev/gdg-on-campus-primakara-university-denpasar-indonesia/"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex"
+            class="focus-ring inline-flex rounded-lg"
           >
-            <div
-              class="inline-flex rounded-lg border border-gray-400 bg-gray-100 p-2 dark:border-gray-600 dark:bg-gray-950"
-            >
+            <div class="surface inline-flex p-2">
               <div class="flex items-center space-x-2">
                 <img
                   src="/assets/imgs/gdg.webp"
@@ -35,7 +35,7 @@
                   class="h-10 w-10 rounded-lg border border-gray-400 dark:border-gray-600"
                 />
                 <span class="text-sm font-bold text-gray-900 dark:text-gray-50">{{
-                  $t("Google Developer Group on Campus Primakara University Lead")
+                  $t("home.gdg-lead")
                 }}</span>
               </div>
             </div>
@@ -54,7 +54,7 @@
           <div>
             <NuxtLink
               to="/about"
-              class="hover:text-primary hover:border-primary focus:ring-primary/30 dark:hover:text-primary dark:hover:border-primary rounded-lg border border-gray-400 px-4 py-2 text-sm font-medium hover:bg-gray-100 focus:ring-2 active:bg-gray-200 dark:border-gray-600 dark:text-gray-50 dark:hover:bg-gray-900 dark:active:bg-gray-800"
+              class="focus-ring hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary rounded-lg border border-gray-400 px-4 py-2 text-sm font-medium transition-colors duration-200 hover:bg-gray-100 active:bg-gray-200 dark:border-gray-600 dark:text-gray-50 dark:hover:bg-gray-900 dark:active:bg-gray-800"
             >
               {{ $t("home.see-more") }}
             </NuxtLink>

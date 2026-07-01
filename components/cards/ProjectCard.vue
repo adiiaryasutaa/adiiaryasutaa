@@ -11,7 +11,7 @@ const { project } = defineProps<Props>();
 
 <template>
   <Card
-    class="hover:border-primary hover:bg-primary-tint active:border-primary active:bg-primary transition-colors"
+    class="hover:border-primary hover:bg-primary-tint active:border-primary active:bg-primary transition-colors duration-200"
   >
     <div class="flex flex-col gap-4 md:flex-row">
       <div class="w-full shrink-0 md:w-48">
@@ -23,7 +23,7 @@ const { project } = defineProps<Props>();
       </div>
       <div class="flex grow flex-col gap-3">
         <div class="flex flex-col gap-1">
-          <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100">
+          <h1 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
             {{ project.name }}
           </h1>
           <p class="leading-relaxed text-gray-600 dark:text-gray-400">

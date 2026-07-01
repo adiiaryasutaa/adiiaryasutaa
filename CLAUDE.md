@@ -41,10 +41,19 @@ pnpm generate   # Generate static site
 
 ### Data Flow
 
-- **Models** (`models/*.ts`): TypeScript interfaces — `Skill`, `Tool`, `Project`, `Tech`, `Experience` (work/education/volunteer), `Friend`, `Blog`, `Tag`, `Repository`, `Preview`
-- **Data files** (`data/*.json`): All dynamic content — `project.json`, `skill.json`, `tech.json`, `tool.json`, `friend.json`, `seo.json`, `experience/work.json`, `experience/education.json`, `experience/volunteer.json`
-- **Composables** (`composables/*.ts`): `useSkill`, `useTool`, `useProject`, `useFriend` (reads from `data/friend.json`), `useLocale`, `useTheme`, `useAdminResource`
-- **i18n**: EN/ID locales via `@nuxtjs/i18n`, files at `i18n/locales/{en,id}.json`
+- **Models** (`models/*.ts`): TypeScript interfaces — `Skill`, `Tool`, `Project`, `Tech`, `Experience` (work/education/volunteer), `Friend`, `Blog`, `Tag`, `Repository`, `Preview`, `PageVisibility`
+- **Data files** (`data/*.json`): All dynamic content — `project.json`, `skill.json`, `tech.json`, `tool.json`, `friend.json`, `seo.json`, `pages.json` (page-visibility toggles), `experience/work.json`, `experience/education.json`, `experience/volunteer.json`
+- **Composables** (`composables/*.ts`): `useSkill`, `useTool`, `useProject`, `useFriend` (reads from `data/friend.json`), `usePages`, `useLocale`, `useTheme`, `useAdminResource`
+- **i18n**: EN/ID locales via `@nuxtjs/i18n`, config at `i18n/i18n.config.ts`, locale files at `i18n/locales/{en,id}.json`
+
+### Page Visibility
+
+Pages (`about`, `project`, `blog`, `friend`) can be toggled on/off from the admin panel.
+
+- `data/pages.json` — booleans read at build time via `models/pages.ts` (`allPages()`), exposed through `usePages()` (`useState<PageVisibility>`)
+- Each toggleable page guards itself: `const pages = usePages(); if (!pages.value.x) throw createError({ statusCode: 404 })`
+- `Navbar` hides links for disabled pages
+- Edited via the admin `pages` resource (`data/[resource]` endpoints, `pages.vue` toggle UI). Changes commit to `data/pages.json` and take effect after Vercel redeploy (~30s)
 - **Blog**: Markdown files at `content/blog/*.md` via `@nuxt/content`. Frontmatter: `title`, `description`, `date`, `tags`, `cover`
 
 ### Styling

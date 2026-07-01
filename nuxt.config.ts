@@ -63,10 +63,10 @@ export default defineNuxtConfig({
     sessionPassword: "",
     adminGithubLogin: "",
     adminSlug: "",
-    githubPat: "",
-    githubRepoOwner: "",
-    githubRepoName: "",
-    githubBranch: "main",
+    githubContentPat: "",
+    githubContentRepoOwner: "",
+    githubContentRepoName: "",
+    githubContentBranch: "main",
     public: {
       adminSlug: "",
     },
@@ -127,6 +127,9 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [],
+    },
   },
 
   css: ["~/assets/css/main.css"],

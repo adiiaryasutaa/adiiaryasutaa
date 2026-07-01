@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const pages = usePages();
+if (!pages.value.friend) throw createError({ statusCode: 404 });
+
 const { t } = useI18n();
 
 useSeoMeta({

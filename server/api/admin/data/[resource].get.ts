@@ -8,6 +8,7 @@ const ALLOWED = new Set([
   "experience/education",
   "experience/volunteer",
   "seo",
+  "pages",
 ]);
 
 export default defineEventHandler(async (event) => {

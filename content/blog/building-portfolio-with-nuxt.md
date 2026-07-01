@@ -5,6 +5,7 @@ date: "2026-04-20"
 tags: ["Nuxt", "Vue", "TailwindCSS", "Tutorial"]
 cover: "https://images.unsplash.com/photo-1773332611628-9e1bdce4881b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ---
+
 ## Getting Started
 
 Setting up a Nuxt 4 project is straightforward. Run the following command to scaffold a new app:

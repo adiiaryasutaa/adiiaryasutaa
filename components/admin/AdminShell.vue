@@ -10,6 +10,7 @@ import {
   DocumentTextIcon,
   MagnifyingGlassIcon,
   GlobeAltIcon,
+  ViewColumnsIcon,
   Bars3Icon,
 } from "@heroicons/vue/24/outline";
 
@@ -29,6 +30,7 @@ const nav = [
   { label: "Blog", to: `/${slug}/blog`, icon: DocumentTextIcon },
   { label: "SEO", to: `/${slug}/seo`, icon: MagnifyingGlassIcon },
   { label: "i18n", to: `/${slug}/i18n`, icon: GlobeAltIcon },
+  { label: "Pages", to: `/${slug}/pages`, icon: ViewColumnsIcon },
 ];
 
 async function logout() {

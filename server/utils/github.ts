@@ -33,10 +33,10 @@ function useLocalFS() {
 
 function useRemoteGitHub() {
   const cfg = useRuntimeConfig();
-  const octokit = new Octokit({ auth: cfg.githubPat });
-  const owner = cfg.githubRepoOwner;
-  const repo = cfg.githubRepoName;
-  const branch = cfg.githubBranch;
+  const octokit = new Octokit({ auth: cfg.githubContentPat });
+  const owner = cfg.githubContentRepoOwner;
+  const repo = cfg.githubContentRepoName;
+  const branch = cfg.githubContentBranch;
 
   return {
     async getFile(path: string) {

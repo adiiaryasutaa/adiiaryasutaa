@@ -6,10 +6,10 @@ Personal portfolio website built with Nuxt 4, Vue 3, and TailwindCSS 4. Features
 
 ## Built with
 
-| | |
-|---|---|
-| [Adi Aryasuta](https://github.com/adiiaryasutaa) | Author |
-| [Claude](https://claude.ai/code) | Co-developer |
+|                                                  |              |
+| ------------------------------------------------ | ------------ |
+| [Adi Aryasuta](https://github.com/adiiaryasutaa) | Author       |
+| [Claude](https://claude.ai/code)                 | Co-developer |
 
 ## Tech Stack
 
@@ -35,19 +35,19 @@ cp .env.example .env
 
 ## Environment Variables
 
-| Variable | Description |
-|---|---|
-| `NUXT_SESSION_PASSWORD` | 32+ char secret for sealed cookies (`openssl rand -base64 32`) |
-| `NUXT_OAUTH_GITHUB_CLIENT_ID` | GitHub OAuth App client ID |
-| `NUXT_OAUTH_GITHUB_CLIENT_SECRET` | GitHub OAuth App client secret |
-| `NUXT_OAUTH_GITHUB_REDIRECT_URL` | OAuth callback URL (local: `http://localhost:3000/auth/github`) |
-| `NUXT_ADMIN_GITHUB_LOGIN` | GitHub username allowed to access admin |
-| `NUXT_ADMIN_SLUG` | Secret URL slug for admin panel (e.g. `openssl rand -hex 6`) |
-| `NUXT_PUBLIC_ADMIN_SLUG` | Same value as `NUXT_ADMIN_SLUG` (exposed to client) |
-| `NUXT_GITHUB_PAT` | Fine-grained PAT with Contents read+write on this repo |
-| `NUXT_GITHUB_REPO_OWNER` | GitHub username |
-| `NUXT_GITHUB_REPO_NAME` | Repository name |
-| `NUXT_GITHUB_BRANCH` | Branch to commit admin edits to (`main` for production) |
+| Variable                          | Description                                                     |
+| --------------------------------- | --------------------------------------------------------------- |
+| `NUXT_SESSION_PASSWORD`           | 32+ char secret for sealed cookies (`openssl rand -base64 32`)  |
+| `NUXT_OAUTH_GITHUB_CLIENT_ID`     | GitHub OAuth App client ID                                      |
+| `NUXT_OAUTH_GITHUB_CLIENT_SECRET` | GitHub OAuth App client secret                                  |
+| `NUXT_OAUTH_GITHUB_REDIRECT_URL`  | OAuth callback URL (local: `http://localhost:3000/auth/github`) |
+| `NUXT_ADMIN_GITHUB_LOGIN`         | GitHub username allowed to access admin                         |
+| `NUXT_ADMIN_SLUG`                 | Secret URL slug for admin panel (e.g. `openssl rand -hex 6`)    |
+| `NUXT_PUBLIC_ADMIN_SLUG`          | Same value as `NUXT_ADMIN_SLUG` (exposed to client)             |
+| `NUXT_GITHUB_PAT`                 | Fine-grained PAT with Contents read+write on this repo          |
+| `NUXT_GITHUB_REPO_OWNER`          | GitHub username                                                 |
+| `NUXT_GITHUB_REPO_NAME`           | Repository name                                                 |
+| `NUXT_GITHUB_BRANCH`              | Branch to commit admin edits to (`main` for production)         |
 
 ## Admin Panel
 
@@ -97,9 +97,9 @@ pnpm format     # Format with Prettier
 
 ## Branching
 
-| Branch | Purpose |
-|---|---|
+| Branch | Purpose                                                            |
+| ------ | ------------------------------------------------------------------ |
 | `main` | Production — deploys to [adiaryasuta.dev](https://adiaryasuta.dev) |
-| `dev` | Development — deploys to Vercel preview URL |
+| `dev`  | Development — deploys to Vercel preview URL                        |
 
 All work happens on `dev`. Open a PR to merge into `main` for production.

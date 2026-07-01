@@ -28,14 +28,18 @@ const isPartialActive = computed(
 </script>
 ⎿  
 <template>
-  <a v-if="external" :href="to" class="flex items-center rounded-lg px-4 py-2 font-medium md:py-2">
+  <a
+    v-if="external"
+    :href="to"
+    class="focus-ring flex items-center rounded-lg px-4 py-2 font-medium md:py-2"
+  >
     <span class="mr-2">{{ prop.label }}</span>
     <ArrowTopRightOnSquareIcon class="h-5 w-5" />
   </a>
   <NuxtLink
     v-else
     :to="localePath(prop.to)"
-    class="block rounded-lg px-4 py-2 font-medium"
+    class="focus-ring block rounded-lg px-4 py-2 font-medium"
     :class="isPartialActive ? 'partial-active text-primary' : ''"
     active-class="router-link-active text-primary"
     exact-active-class="router-link-exact-active text-primary"

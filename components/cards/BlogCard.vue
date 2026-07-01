@@ -22,9 +22,9 @@ const formattedDate = computed(() =>
 </script>
 
 <template>
-  <NuxtLink :to="post.path" class="group block">
+  <NuxtLink :to="post.path" class="focus-ring group block rounded-lg">
     <Card
-      class="group-hover:border-primary group-hover:bg-primary-tint group-active:border-primary group-active:bg-primary transition-colors"
+      class="group-hover:border-primary group-hover:bg-primary-tint group-active:border-primary group-active:bg-primary transition-colors duration-200"
     >
       <div class="flex flex-col gap-4 md:flex-row">
         <div class="shrink-0 md:w-56">
@@ -43,7 +43,7 @@ const formattedDate = computed(() =>
         <div class="flex grow flex-col gap-3">
           <div class="flex flex-col gap-1">
             <h2
-              class="group-hover:text-primary text-xl font-semibold text-gray-900 transition-colors dark:text-gray-100"
+              class="group-hover:text-primary text-xl font-semibold tracking-tight text-gray-900 transition-colors duration-200 dark:text-gray-100"
             >
               {{ post.title }}
             </h2>

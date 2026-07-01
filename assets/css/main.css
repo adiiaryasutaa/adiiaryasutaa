@@ -63,6 +63,17 @@
   }
 }
 
+/* Shared surface: one source of truth for the bordered card/pill style
+   reused by Card, Navbar, and control buttons. Padding stays per-use. */
+@utility surface {
+  @apply rounded-lg border border-gray-400 bg-gray-100 dark:border-gray-600 dark:bg-gray-950;
+}
+
+/* Consistent keyboard focus ring, driven by --primary. */
+@utility focus-ring {
+  @apply focus-visible:ring-primary/40 focus-visible:ring-2 focus-visible:outline-none;
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -157,4 +168,17 @@
 .fade-leave-to {
   opacity: 0;
   transform: translateX(2em);
+}
+
+/* Respect users who ask for less motion: neutralize page transitions,
+   the navbar scroll-hide, and card hover animations. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -12,33 +12,25 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
-    "@nuxt/content": "^3.13.0",
-    "@nuxtjs/i18n": "^10.3.0",
-    "@nuxtjs/sitemap": "^8.0.15",
+    "@nuxt/content": "^3.14.0",
+    "@nuxtjs/i18n": "^10.4.0",
+    "@nuxtjs/sitemap": "^8.2.2",
     "@octokit/rest": "^22.0.1",
-    "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.3.0",
-    "better-sqlite3": "^12.9.0",
-    "nuxt": "4.3.1",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.2",
+    "better-sqlite3": "^12.11.1",
+    "nuxt": "^4.4.8",
     "nuxt-auth-utils": "^0.5.29",
-    "tailwindcss": "^4.3.0",
+    "tailwindcss": "^4.3.2",
     "vue": "latest",
-    "vue-i18n": "^11.4.2",
-    "vue-router": "^5.0.6"
+    "vue-i18n": "^11.4.6",
+    "vue-router": "^5.1.0"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/color-mode": "^4.0.1",
     "@prettier/plugin-xml": "^3.4.2",
-    "prettier": "^3.8.3",
+    "prettier": "^3.9.4",
     "prettier-plugin-tailwindcss": "^0.8.0"
   },
-  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "@tailwindcss/oxide",
-      "better-sqlite3",
-      "esbuild"
-    ]
-  }
+  "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b"
 }
