@@ -32,11 +32,11 @@ const formattedDate = computed(() =>
             v-if="post.cover"
             :src="post.cover"
             :alt="post.title"
-            class="h-48 w-full rounded-lg border border-gray-400 object-cover md:h-full dark:border-gray-600"
+            class="aspect-video w-full rounded-lg border border-gray-400 object-cover md:aspect-auto md:h-full dark:border-gray-600"
           />
           <div
             v-else
-            class="h-48 w-full rounded-lg border border-gray-400 bg-gray-200 md:h-full dark:border-gray-600 dark:bg-gray-800"
+            class="aspect-video w-full rounded-lg border border-gray-400 bg-gray-200 md:aspect-auto md:h-full dark:border-gray-600 dark:bg-gray-800"
           />
         </div>
 

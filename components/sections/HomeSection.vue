@@ -2,17 +2,11 @@
 
 <template>
   <section class="container">
-    <div class="flex flex-col items-start">
+    <div
+      class="flex flex-col gap-8 md:min-h-[calc(100svh-20rem)] md:flex-row md:items-center md:justify-between md:gap-12"
+    >
       <div class="flex max-w-2xl flex-col space-y-8">
         <div class="flex flex-col space-y-4">
-          <div class="h-40 w-40">
-            <img
-              src="/assets/imgs/adiaryasuta.jpg"
-              alt="Adi Aryasuta"
-              class="rounded-full border border-gray-400 dark:border-gray-600"
-            />
-          </div>
-
           <div>
             <h1
               class="text-3xl leading-tight font-semibold tracking-tight text-balance text-gray-800 lg:text-4xl dark:text-gray-200"
@@ -60,6 +54,14 @@
             </NuxtLink>
           </div>
         </div>
+      </div>
+
+      <div class="shrink-0 max-md:order-first">
+        <img
+          src="/assets/imgs/adiaryasuta.jpg"
+          alt="Adi Aryasuta"
+          class="h-40 w-40 rounded-full border border-gray-400 md:h-64 md:w-64 lg:h-80 lg:w-80 dark:border-gray-600"
+        />
       </div>
     </div>
   </section>

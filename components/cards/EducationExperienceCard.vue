@@ -21,7 +21,7 @@ const { education } = defineProps<Props>();
           class="h-20 w-20 rounded-lg"
         />
       </div>
-      <div class="flex flex-col gap-4">
+      <div class="flex max-w-prose flex-col gap-4">
         <div class="flex flex-col">
           <h2 class="text-left text-xl font-medium text-gray-900 dark:text-gray-100">
             {{ education.school }}

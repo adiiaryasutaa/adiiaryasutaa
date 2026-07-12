@@ -58,9 +58,6 @@
   @media (width >= theme(--breakpoint-xl)) {
     padding-inline: 5rem;
   }
-  @media (width >= theme(--breakpoint-2xl)) {
-    padding-inline: 6rem;
-  }
 }
 
 /* Shared surface: one source of truth for the bordered card/pill style

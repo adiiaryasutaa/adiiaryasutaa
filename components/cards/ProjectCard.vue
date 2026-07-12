@@ -11,14 +11,14 @@ const { project } = defineProps<Props>();
 
 <template>
   <Card
-    class="hover:border-primary hover:bg-primary-tint active:border-primary active:bg-primary transition-colors duration-200"
+    class="hover:border-primary hover:bg-primary-tint active:border-primary active:bg-primary-tint h-full transition-colors duration-200"
   >
-    <div class="flex flex-col gap-4 md:flex-row">
-      <div class="w-full shrink-0 md:w-48">
+    <div class="flex h-full flex-col gap-4">
+      <div class="w-full shrink-0">
         <img
           :src="project.cover ?? '/assets/imgs/projects/no-image.png'"
           :alt="project.name"
-          class="h-48 w-full rounded-lg border border-gray-400 object-cover dark:border-gray-600"
+          class="aspect-video w-full rounded-lg border border-gray-400 object-cover dark:border-gray-600"
         />
       </div>
       <div class="flex grow flex-col gap-3">
@@ -38,7 +38,7 @@ const { project } = defineProps<Props>();
             {{ tag.name }}
           </span>
         </div>
-        <div v-if="project.preview || project.repository" class="flex items-center gap-1">
+        <div v-if="project.preview || project.repository" class="mt-auto flex items-center gap-1">
           <a
             v-if="project.preview"
             :href="project.preview.url"

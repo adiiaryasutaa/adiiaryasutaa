@@ -6,7 +6,7 @@
   >
     <div class="sm:container sm:mx-auto">
       <div
-        class="flex min-h-screen flex-col border-gray-400 bg-gray-50 sm:border-x dark:border-gray-600 dark:bg-gray-900"
+        class="mx-auto flex min-h-screen max-w-6xl flex-col border-gray-400 bg-gray-50 sm:border-x dark:border-gray-600 dark:bg-gray-900"
       >
         <Navbar />
         <div class="grow overflow-hidden">
