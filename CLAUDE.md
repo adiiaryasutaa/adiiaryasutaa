@@ -63,7 +63,7 @@ Pages (`about`, `project`, `blog`, `friend`) can be toggled on/off from the admi
 - Dark mode via `@nuxtjs/color-mode` (`classSuffix: ""`, fallback: `light`)
 - **TailwindCSS v4 note**: uses CSS `translate` property (not `transform`) for translate utilities — use scoped CSS for scroll-hide transitions
 - Page transitions enabled (`name: "page", mode: "out-in"`)
-- Shiki syntax highlighting: single `theme: "github-dark"` (inline styles, not CSS class strategy)
+- Shiki syntax highlighting: dual theme `github-light`/`github-dark` following color mode, configured under `content.build.markdown.highlight` (Nuxt Content v3 key — `content.highlight` is v2 and silently ignored). Token colors come from MDC's emitted CSS vars (`--shiki-default`/`--shiki-dark`); `ProsePre` forwards `$attrs` onto `<pre>` so the `shiki` class lands there, and `.prose pre.shiki` backgrounds are set in `main.css`
 
 ### SEO
 

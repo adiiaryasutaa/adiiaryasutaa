@@ -92,21 +92,28 @@ export default defineNuxtConfig({
   ],
 
   content: {
-    highlight: {
-      theme: "github-dark",
-      langs: [
-        "bash",
-        "typescript",
-        "javascript",
-        "vue",
-        "css",
-        "html",
-        "php",
-        "java",
-        "json",
-        "markdown",
-        "sql",
-      ],
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: "github-light",
+            dark: "github-dark",
+          },
+          langs: [
+            "bash",
+            "typescript",
+            "javascript",
+            "vue",
+            "css",
+            "html",
+            "php",
+            "java",
+            "json",
+            "markdown",
+            "sql",
+          ],
+        },
+      },
     },
   },
 

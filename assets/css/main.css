@@ -141,6 +141,20 @@
   border-radius: 0;
 }
 
+/* Code blocks follow the page theme: Shiki emits per-token CSS variables
+   (--shiki-default / --shiki-dark) consumed by MDC's runtime CSS; the pre
+   background must match the active Shiki theme (github-light / github-dark)
+   instead of the typography plugin's always-dark default. */
+.prose pre.shiki {
+  background-color: #ffffff;
+  --tw-prose-pre-code: var(--color-gray-700);
+}
+
+.dark .prose pre.shiki {
+  background-color: #24292e;
+  --tw-prose-pre-code: var(--color-gray-300);
+}
+
 .dark .prose {
   --tw-prose-body: var(--color-gray-300);
   --tw-prose-headings: var(--color-gray-100);
