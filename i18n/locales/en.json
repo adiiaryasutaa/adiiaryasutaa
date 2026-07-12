@@ -12,7 +12,9 @@
     "brand": "Full-Stack Web Developer & Mobile Developer",
     "description": "Hello I'm, Adi Aryasuta, also known as Adi. I'm form Denpasar, Bali, Indonesia. I specialize in full-stack web developer, handling everything from front-end and back-end to cloud infrastructure. My toolkit includes TypeScript, Next.js, Nest.js, and more",
     "see-more": "More about me",
-    "gdg-lead": "Google Developer Group on Campus Primakara University Lead"
+    "gdg-lead": "Google Developer Group on Campus Primakara University Lead",
+    "latest-posts": "Latest Posts",
+    "all-posts": "All posts"
   },
   "common": {
     "present": "Present"

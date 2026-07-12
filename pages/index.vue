@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n();
+const pages = usePages();
 
 useSeoMeta({
   title: () => t("brand"),
@@ -37,5 +38,6 @@ useHead({
 <template>
   <MainSection>
     <HomeSection />
+    <LatestBlogSection v-if="pages.blog" class="pt-10" />
   </MainSection>
 </template>
