@@ -10,7 +10,7 @@
 :root {
   --primary: #0369a1; /* sky-700 — 5.9:1 contrast on white, passes WCAG AA */
   --primary-tint: #e0f2fe; /* sky-100 */
-  --grid-line: rgb(156 163 175 / 0.35); /* gray-400 */
+  --grid-line: rgb(156 163 175 / 0.1); /* gray-400 */
 
   --canvas: var(--color-gray-200);
   --sheet: var(--color-gray-50);
@@ -26,7 +26,7 @@
 .dark {
   --primary: #38bdf8; /* sky-400 */
   --primary-tint: #0c4a6e; /* sky-900 */
-  --grid-line: rgb(255 255 255 / 0.12);
+  --grid-line: rgb(255 255 255 / 0.04);
 
   --canvas: var(--color-stone-950);
   --sheet: var(--color-stone-900);
