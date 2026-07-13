@@ -1,62 +1,107 @@
 {
   "data": [
     {
-      "title": "Game Programmer",
+      "title": "Web Developer & Game Programmer",
       "employment": "Part-time",
       "company": "Palm Game Studio",
-      "description": "I'm currently working as a Full Stack Web Developer & UI/UX Designer at PT. Guna Teknologi Nusantara (RED System). I'm interested in web development and UI/UX design.",
+      "description": "Developing core gameplay mechanics and systems in Unity at a university-incubated game studio — enemy AI and wave systems for Knafa (action survival), the core loop and customer-queue logic for Warteg Frenzy (time-management sim), and the arithmetic speed-challenge logic for Game Teacher (edtech).",
       "current": true,
       "start": {
-        "month": "January",
+        "month": "September",
         "year": "2024"
       },
       "end": {},
       "media": []
     },
     {
-      "title": "Full Stack Web Developer & UI/UX Designer",
+      "title": "Freelance Full-Stack Web Developer & Game Programmer",
+      "employment": "Freelance",
+      "company": "Self-employed",
+      "description": "End-to-end solutions for diverse client needs: a Laravel POS system for a department store with real-time transactions, inventory, and automated sales reporting; a TailwindCSS performance refactor of a flower-shop landing page; an educational trash-detection game in Unity integrating a YOLO computer-vision model; and end-to-end Figma UI/UX for a cake-shop e-commerce app.",
+      "current": true,
+      "start": {
+        "month": "June",
+        "year": "2023"
+      },
+      "end": {},
+      "media": []
+    },
+    {
+      "title": "Full-Stack Web Developer",
+      "employment": "Internship",
+      "company": "Red System",
+      "description": "Semester 5 MBKM internship on a Laravel business-management system: built the Deals and Workflow modules for tracking client data and project progress, and the connected financial modules — billing, invoice generation, and payment receipts.",
+      "current": false,
+      "start": {
+        "month": "August",
+        "year": "2025"
+      },
+      "end": {
+        "month": "February",
+        "year": "2026"
+      },
+      "media": []
+    },
+    {
+      "title": "Assistant Lecturer – Programming Algorithms & Logic",
+      "employment": "Part-time",
+      "company": "Primakara University",
+      "description": "Instructor for the Programming Basic course for the Informatics class of 2025 — comprehensive lecture sessions on algorithm design, translating logic into pseudocode and flowcharts.",
+      "current": false,
+      "start": {
+        "month": "October",
+        "year": "2025"
+      },
+      "end": {
+        "month": "October",
+        "year": "2025"
+      },
+      "media": []
+    },
+    {
+      "title": "Full-Stack Web Developer, Flutter Front-End Developer & UI/UX Designer",
       "employment": "Part-time",
       "company": "Atrem Project",
-      "description": "I'm currently working as a Full Stack Web Developer & UI/UX Designer at PT. Guna Teknologi Nusantara (RED System). I'm interested in web development and UI/UX design.",
+      "description": "Engineered the REST API for a learning management system with secure student authentication and course/grading data; built a Laravel swimming-class scheduling app with automated schedule generation; developed the Flutter frontend for an e-learning app; led multiple designs from wireframes to high-fidelity mockups, including a ticketing app and a personal finance tracker.",
       "current": false,
       "start": {
         "month": "October",
         "year": "2023"
       },
       "end": {
-        "month": "January",
+        "month": "May",
         "year": "2024"
       },
       "media": []
     },
     {
-      "title": "Full Stack Web Developer & Copywriter",
+      "title": "Copywriter & Full-Stack Web Developer",
       "employment": "Internship",
       "company": "PT. Guna Teknologi Nusantara (RED System)",
-      "description": "I'm currently working as a Full Stack Web Developer & Copywriter at PT. Guna Teknologi Nusantara (RED System). I'm interested in web development and copywriting.",
+      "description": "Built a custom blog system from scratch with Laravel and TailwindCSS to support content marketing; redesigned the Patient Hub landing page and built a WhatsApp-based reminder solution to automate patient communication; wrote SEO-focused articles.",
       "current": false,
       "start": {
-        "month": "January",
+        "month": "June",
         "year": "2022"
       },
       "end": {
-        "month": "April",
+        "month": "September",
         "year": "2022"
       },
       "media": []
     },
     {
-      "title": "Mobile Application Developer",
+      "title": "Android Developer",
       "employment": "Internship",
       "company": "Blue Lake Indonesia",
-      "description": "I'm currently working as a Mobile Application Developer at Blue Lake Indonesia. I'm interested in mobile development.",
+      "description": "Built an online attendance application in native Java with a focus on efficient data handling, and acted as project lead for the intern team, overseeing code integration and workflow.",
       "current": false,
       "start": {
-        "month": "January",
+        "month": "December",
         "year": "2021"
       },
       "end": {
-        "month": "April",
+        "month": "February",
         "year": "2022"
       },
       "media": []

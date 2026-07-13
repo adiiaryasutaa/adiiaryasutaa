@@ -9,8 +9,8 @@
   },
   "soon": "Soon",
   "home": {
-    "brand": "Full-Stack Web Developer & Mobile Developer",
-    "description": "Hello I'm, Adi Aryasuta, also known as Adi. I'm form Denpasar, Bali, Indonesia. I specialize in full-stack web developer, handling everything from front-end and back-end to cloud infrastructure. My toolkit includes TypeScript, Next.js, Nest.js, and more",
+    "brand": "Full-Stack Developer",
+    "description": "Hi, I'm Adi Aryasuta — a full-stack developer from Denpasar, Bali, with over three years of hands-on experience across web, mobile, and game development. I love building useful products and quickly mastering new technologies to solve real-world problems.",
     "see-more": "More about me",
     "gdg-lead": "Google Developer Group on Campus Primakara University Lead",
     "latest-posts": "Latest Posts",
@@ -21,9 +21,9 @@
   },
   "about": {
     "description": [
-      "Hello! I'm Gung Adi, a multi-disciplinary developer with expertise in Full-Stack Web, Mobile, and Game Development, based on the beautiful island of Bali 🇮🇩.",
-      "I primarily work as a freelance developer, helping clients bring their digital ideas to life. Alongside my freelance work, I contribute as a part-time Game Programmer at Palm Game Studio.",
-      "Passionate about community building, I lead Primakara Developers, a local developer community in Bali. I enjoy sharing my learning journey and empowering fellow developers to grow."
+      "Hello! I'm Adi Aryasuta, a versatile full-stack developer based on the beautiful island of Bali 🇮🇩, with over three years of hands-on experience in web, mobile, and game development.",
+      "I work as a freelance full-stack developer and game programmer, helping clients bring their digital ideas to life — from Laravel web systems to Unity games. Alongside freelancing, I'm a part-time web developer and game programmer at Palm Game Studio, a university-incubated game studio.",
+      "As a scholarship recipient passionate about community, I lead Primakara Developers and the Google Developer Group on Campus at Primakara University — sharing my learning journey and empowering fellow developers to grow."
     ],
     "image-description": [
       "Adi Aryasuta at SMK Negeri 1 Denpasar",
@@ -46,7 +46,7 @@
     "more-posts": "More Posts"
   },
   "meta": {
-    "description": "Full-Stack Web & Mobile Developer based in Bali, Indonesia. Building modern web applications with Vue, Nuxt, and Laravel.",
+    "description": "Full-Stack Developer based in Bali, Indonesia, working across web, mobile, and game development with Laravel, Vue, Nuxt, Flutter, and Unity.",
     "about-description": "Learn about Adi Aryasuta — a Full-Stack Developer with experience in Vue, Nuxt, Laravel, and mobile development.",
     "project-description": "Explore projects built by Adi Aryasuta, from web apps to mobile applications.",
     "blog-description": "Articles on web development, Vue, Nuxt, TypeScript, and software engineering by Adi Aryasuta.",

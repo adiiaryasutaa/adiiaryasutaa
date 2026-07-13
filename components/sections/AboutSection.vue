@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { tm, rt } = useI18n();
+
+const bioParagraphs = computed(() => (tm("about.description") as unknown[]).map((p) => rt(p)));
+</script>
 
 <template>
   <section class="container">
@@ -11,9 +15,7 @@
         />
       </div>
       <div class="mt-10 max-w-prose space-y-4 text-gray-700 md:mt-0 md:ml-10 dark:text-gray-300">
-        <Paragraph v-html="$t('about.description[0]')"></Paragraph>
-        <Paragraph v-html="$t('about.description[1]')"></Paragraph>
-        <Paragraph v-html="$t('about.description[2]')"></Paragraph>
+        <Paragraph v-for="(paragraph, i) in bioParagraphs" :key="i">{{ paragraph }}</Paragraph>
       </div>
     </div>
   </section>

@@ -24,7 +24,7 @@
 />
 ```
 
-(Exact implementation may use a computed; requirement: all three paragraphs render, `v-html` behavior preserved.)
+(Implementation note: shipped as a `bioParagraphs` computed over `tm()`/`rt()` rendered through the default slot instead of `v-html` — `v-html` as a fallthrough attr on the `Paragraph` component loses to its slot rendering, and the new copy contains no HTML.)
 
 ## data/experience/work.json — full replacement (7 entries, newest first)
 

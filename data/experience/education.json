@@ -3,14 +3,14 @@
     {
       "school": "Primakara University",
       "major": "Informatics",
-      "description": "I'm currently studying Informatics at Primakara University. I'm interested in web development and mobile development.",
+      "description": "Leading the campus developer community — Primakara Developers and Google Developer Group on Campus — and active in the Informatics study program student association.",
       "start": "2023",
       "end": "2027"
     },
     {
       "school": "SMK Negeri 1 Denpasar",
-      "major": "Software Engineering",
-      "description": "I'm currently studying Software Engineering at SMK Negeri 1 Denpasar. I'm interested in web development and mobile development.",
+      "major": "Computer Software Engineering",
+      "description": "Vocational high school, software engineering track.",
       "start": "2020",
       "end": "2023"
     }
