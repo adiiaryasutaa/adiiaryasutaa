@@ -29,10 +29,9 @@ const { work } = defineProps<Props>();
           <h3 class="text-content text-left">
             {{ work.company }}
           </h3>
-          <div class="flex flex-col sm:flex-row sm:items-center">
-            <span class="sm:after:mx-2 sm:after:content-['·']">
-              <TimeRange :start="work.start" :end="work.end" :current="work.current" />
-            </span>
+          <div class="flex flex-wrap items-baseline gap-x-2">
+            <TimeRange :start="work.start" :end="work.end" :current="work.current" />
+            <span v-if="work.employment" class="text-content-muted text-sm">·</span>
             <p class="text-content text-left text-sm">
               {{ work.employment }}
             </p>
