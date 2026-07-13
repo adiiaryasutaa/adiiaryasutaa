@@ -46,7 +46,7 @@
           <div>
             <NuxtLink
               to="/about"
-              class="focus-ring hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary border-edge hover:bg-surface active:bg-surface-raised rounded-lg border px-4 py-2 text-sm font-medium transition-colors duration-200"
+              class="focus-ring hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary border-edge text-content hover:bg-surface active:bg-surface-raised rounded-lg border px-4 py-2 text-sm font-medium transition-colors duration-200"
             >
               {{ $t("home.see-more") }}
             </NuxtLink>

@@ -33,7 +33,7 @@ const { project } = defineProps<Props>();
         <div class="flex flex-wrap gap-2">
           <span
             v-for="tag in project.tags"
-            class="border-edge bg-surface rounded-lg border px-2 py-1 text-sm font-medium"
+            class="border-edge bg-surface text-content-secondary rounded-lg border px-2 py-1 text-sm font-medium"
           >
             {{ tag.name }}
           </span>

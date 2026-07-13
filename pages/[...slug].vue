@@ -19,7 +19,7 @@ useHeadSafe({
       <div class="flex flex-col items-center justify-center">
         <NuxtLink
           to="/"
-          class="hover:text-primary hover:border-primary focus:ring-primary/30 dark:hover:text-primary dark:hover:border-primary border-edge hover:bg-surface active:bg-surface-raised rounded-lg border px-4 py-2 text-sm font-medium focus:ring-2"
+          class="hover:text-primary hover:border-primary focus:ring-primary/30 dark:hover:text-primary dark:hover:border-primary border-edge text-content hover:bg-surface active:bg-surface-raised rounded-lg border px-4 py-2 text-sm font-medium focus:ring-2"
         >
           Back to home
         </NuxtLink>
