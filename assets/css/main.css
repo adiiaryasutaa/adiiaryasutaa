@@ -26,7 +26,7 @@
 .dark {
   --primary: #38bdf8; /* sky-400 */
   --primary-tint: #0c4a6e; /* sky-900 */
-  --grid-line: rgb(255 255 255 / 0.05);
+  --grid-line: rgb(255 255 255 / 0.12);
 
   --canvas: var(--color-stone-950);
   --sheet: var(--color-stone-900);
@@ -58,8 +58,16 @@
   --font-jetbrains-mono: "JetBrains Mono", monospace;
 }
 
-/* Decorative grid for the gutters outside the content sheet; the opaque
-   sheet covers the center, so this only shows on wide viewports. */
+/* Users who ask for less transparency get the opaque sheet back
+   (the translucent sheet lets the grid show through everywhere else). */
+@media (prefers-reduced-transparency: reduce) {
+  .sheet {
+    background-color: var(--color-sheet);
+    backdrop-filter: none;
+  }
+}
+
+/* Decorative grid painted behind the translucent content sheet. */
 @utility bg-grid {
   background-image:
     linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
