@@ -76,7 +76,7 @@ function removeItem(i: number) {
 
 <template>
   <AdminShell>
-    <h1 class="mb-6 text-xl font-bold text-gray-900 dark:text-gray-100">Experiences</h1>
+    <h1 class="text-content mb-6 text-xl font-bold">Experiences</h1>
 
     <!-- Tabs -->
     <div class="mb-6 flex gap-2">
@@ -87,7 +87,7 @@ function removeItem(i: number) {
         :class="
           activeTab === tab
             ? 'bg-primary text-white'
-            : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-400'
+            : 'bg-surface text-content-secondary hover:bg-surface-raised'
         "
         @click="activeTab = tab"
       >
@@ -97,7 +97,7 @@ function removeItem(i: number) {
 
     <div
       v-if="current.loading.value && !current.data.value"
-      class="py-12 text-center text-gray-400"
+      class="text-content-muted py-12 text-center"
     >
       Loading…
     </div>
@@ -118,34 +118,34 @@ function removeItem(i: number) {
           <div
             v-for="(item, i) in current.data.value.data"
             :key="i"
-            class="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900"
+            class="border-edge-soft rounded-xl border bg-white p-5"
           >
             <div class="mb-3 flex justify-between">
-              <span class="text-sm text-gray-500">#{{ i + 1 }}</span>
+              <span class="text-content-muted text-sm">#{{ i + 1 }}</span>
               <button class="text-sm text-red-500" @click="removeItem(i)">Remove</button>
             </div>
             <div class="grid gap-3 sm:grid-cols-2">
               <div>
-                <label class="mb-1 block text-xs text-gray-500">Title</label>
+                <label class="text-content-muted mb-1 block text-xs">Title</label>
                 <input
                   v-model="item.title"
-                  class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                  class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                 />
               </div>
               <div>
-                <label class="mb-1 block text-xs text-gray-500">{{
+                <label class="text-content-muted mb-1 block text-xs">{{
                   activeTab === "work" ? "Company" : "Organization"
                 }}</label>
                 <input
                   v-model="item[activeTab === 'work' ? 'company' : 'organization']"
-                  class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                  class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                 />
               </div>
               <div v-if="activeTab === 'work'">
-                <label class="mb-1 block text-xs text-gray-500">Employment type</label>
+                <label class="text-content-muted mb-1 block text-xs">Employment type</label>
                 <select
                   v-model="item.employment"
-                  class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                  class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                 >
                   <option>Full-time</option>
                   <option>Part-time</option>
@@ -154,52 +154,52 @@ function removeItem(i: number) {
                 </select>
               </div>
               <div class="sm:col-span-2">
-                <label class="mb-1 block text-xs text-gray-500">Description</label>
+                <label class="text-content-muted mb-1 block text-xs">Description</label>
                 <textarea
                   v-model="item.description"
                   rows="2"
-                  class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                  class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                 />
               </div>
               <div>
-                <label class="mb-1 block text-xs text-gray-500">Start month</label>
+                <label class="text-content-muted mb-1 block text-xs">Start month</label>
                 <select
                   v-model="item.start.month"
-                  class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                  class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                 >
                   <option v-for="m in months" :key="m" :value="m">{{ m }}</option>
                 </select>
               </div>
               <div>
-                <label class="mb-1 block text-xs text-gray-500">Start year</label>
+                <label class="text-content-muted mb-1 block text-xs">Start year</label>
                 <input
                   v-model="item.start.year"
                   type="number"
-                  class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                  class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                 />
               </div>
               <div>
-                <label class="mb-2 flex items-center gap-2 text-xs text-gray-500">
+                <label class="text-content-muted mb-2 flex items-center gap-2 text-xs">
                   <input v-model="item.current" type="checkbox" class="accent-primary" />
                   Current (no end date)
                 </label>
               </div>
               <template v-if="!item.current">
                 <div>
-                  <label class="mb-1 block text-xs text-gray-500">End month</label>
+                  <label class="text-content-muted mb-1 block text-xs">End month</label>
                   <select
                     v-model="item.end.month"
-                    class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                    class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                   >
                     <option v-for="m in months" :key="m" :value="m">{{ m }}</option>
                   </select>
                 </div>
                 <div>
-                  <label class="mb-1 block text-xs text-gray-500">End year</label>
+                  <label class="text-content-muted mb-1 block text-xs">End year</label>
                   <input
                     v-model="item.end.year"
                     type="number"
-                    class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                    class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                   />
                 </div>
               </template>
@@ -212,49 +212,49 @@ function removeItem(i: number) {
           <div
             v-for="(item, i) in current.data.value.data"
             :key="i"
-            class="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900"
+            class="border-edge-soft rounded-xl border bg-white p-5"
           >
             <div class="mb-3 flex justify-between">
-              <span class="text-sm text-gray-500">#{{ i + 1 }}</span>
+              <span class="text-content-muted text-sm">#{{ i + 1 }}</span>
               <button class="text-sm text-red-500" @click="removeItem(i)">Remove</button>
             </div>
             <div class="grid gap-3 sm:grid-cols-2">
               <div>
-                <label class="mb-1 block text-xs text-gray-500">School</label>
+                <label class="text-content-muted mb-1 block text-xs">School</label>
                 <input
                   v-model="item.school"
-                  class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                  class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                 />
               </div>
               <div>
-                <label class="mb-1 block text-xs text-gray-500">Major</label>
+                <label class="text-content-muted mb-1 block text-xs">Major</label>
                 <input
                   v-model="item.major"
-                  class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                  class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                 />
               </div>
               <div>
-                <label class="mb-1 block text-xs text-gray-500">Start year</label>
+                <label class="text-content-muted mb-1 block text-xs">Start year</label>
                 <input
                   v-model="item.start"
                   type="number"
-                  class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                  class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                 />
               </div>
               <div>
-                <label class="mb-1 block text-xs text-gray-500">End year</label>
+                <label class="text-content-muted mb-1 block text-xs">End year</label>
                 <input
                   v-model="item.end"
                   type="number"
-                  class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                  class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                 />
               </div>
               <div class="sm:col-span-2">
-                <label class="mb-1 block text-xs text-gray-500">Description</label>
+                <label class="text-content-muted mb-1 block text-xs">Description</label>
                 <textarea
                   v-model="item.description"
                   rows="2"
-                  class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                  class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                 />
               </div>
             </div>

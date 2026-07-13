@@ -20,10 +20,8 @@ const sections = [
 
 <template>
   <AdminShell>
-    <h1 class="mb-1 text-2xl font-bold text-gray-900 dark:text-gray-100">
-      Welcome, {{ user?.name ?? user?.login }}
-    </h1>
-    <p class="mb-8 text-sm text-gray-500 dark:text-gray-400">
+    <h1 class="text-content mb-1 text-2xl font-bold">Welcome, {{ user?.name ?? user?.login }}</h1>
+    <p class="text-content-muted mb-8 text-sm">
       Changes commit to GitHub and trigger a Vercel redeploy (~30s).
     </p>
 
@@ -32,10 +30,10 @@ const sections = [
         v-for="s in sections"
         :key="s.to"
         :to="s.to"
-        class="rounded-xl border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md dark:border-gray-800 dark:bg-gray-900"
+        class="border-edge-soft rounded-xl border bg-white p-5 transition-shadow hover:shadow-md"
       >
-        <p class="font-semibold text-gray-900 dark:text-gray-100">{{ s.label }}</p>
-        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{{ s.desc }}</p>
+        <p class="text-content font-semibold">{{ s.label }}</p>
+        <p class="text-content-muted mt-1 text-sm">{{ s.desc }}</p>
       </NuxtLink>
     </div>
   </AdminShell>

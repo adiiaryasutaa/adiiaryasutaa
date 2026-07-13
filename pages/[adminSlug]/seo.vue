@@ -14,42 +14,38 @@ onMounted(load);
 
 <template>
   <AdminShell>
-    <h1 class="mb-2 text-xl font-bold text-gray-900 dark:text-gray-100">SEO Settings</h1>
-    <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">
+    <h1 class="text-content mb-2 text-xl font-bold">SEO Settings</h1>
+    <p class="text-content-muted mb-6 text-sm">
       Site-wide defaults for Open Graph, Twitter Card, and meta tags.
     </p>
 
-    <div v-if="loading && !data" class="py-12 text-center text-gray-400">Loading…</div>
+    <div v-if="loading && !data" class="text-content-muted py-12 text-center">Loading…</div>
 
     <div
       v-else-if="data"
-      class="grid max-w-2xl gap-5 rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900"
+      class="border-edge-soft grid max-w-2xl gap-5 rounded-xl border bg-white p-6"
     >
       <div>
-        <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400"
-          >Site name</label
-        >
+        <label class="text-content-secondary mb-1 block text-xs font-medium">Site name</label>
         <input
           v-model="data.siteName"
-          class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+          class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-2 text-sm"
         />
       </div>
       <div>
-        <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400"
-          >Site URL</label
-        >
+        <label class="text-content-secondary mb-1 block text-xs font-medium">Site URL</label>
         <input
           v-model="data.siteUrl"
-          class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+          class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-2 text-sm"
         />
       </div>
       <div>
-        <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400"
+        <label class="text-content-secondary mb-1 block text-xs font-medium"
           >Default OG image URL</label
         >
         <input
           v-model="data.defaultOgImage"
-          class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+          class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-2 text-sm"
         />
         <img
           v-if="data.defaultOgImage"
@@ -58,29 +54,27 @@ onMounted(load);
         />
       </div>
       <div>
-        <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400"
-          >Theme color</label
-        >
+        <label class="text-content-secondary mb-1 block text-xs font-medium">Theme color</label>
         <div class="flex items-center gap-3">
           <input
             v-model="data.themeColor"
             type="color"
-            class="h-10 w-16 cursor-pointer rounded border border-gray-200 bg-gray-50 p-1 dark:border-gray-700"
+            class="border-edge-soft bg-sheet h-10 w-16 cursor-pointer rounded border p-1"
           />
           <input
             v-model="data.themeColor"
-            class="flex-1 rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+            class="border-edge-soft bg-sheet flex-1 rounded-lg border px-3 py-2 text-sm"
           />
         </div>
       </div>
       <div>
-        <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400"
+        <label class="text-content-secondary mb-1 block text-xs font-medium"
           >Twitter handle (without @)</label
         >
         <input
           v-model="data.twitterHandle"
           placeholder="adiiaryasutaa"
-          class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+          class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-2 text-sm"
         />
       </div>
     </div>

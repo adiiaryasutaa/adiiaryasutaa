@@ -96,7 +96,7 @@ useHead({
         <!-- Back button -->
         <NuxtLink
           to="/blog"
-          class="hover:text-primary active:text-primary dark:hover:text-primary dark:active:text-primary flex w-fit items-center gap-1.5 text-sm text-gray-500 transition-colors dark:text-gray-400"
+          class="hover:text-primary active:text-primary dark:hover:text-primary dark:active:text-primary text-content-muted flex w-fit items-center gap-1.5 text-sm transition-colors"
         >
           <ArrowLeftIcon class="h-4 w-4 shrink-0" />
           <span>{{ $t("blog.back") }}</span>
@@ -108,15 +108,12 @@ useHead({
             v-if="post.cover"
             :src="post.cover"
             :alt="post.title"
-            class="w-full rounded-lg border border-gray-400 object-cover dark:border-gray-600"
+            class="border-edge w-full rounded-lg border object-cover"
           />
-          <div
-            v-else
-            class="h-64 w-full rounded-lg border border-gray-400 bg-gray-200 dark:border-gray-600 dark:bg-gray-800"
-          />
+          <div v-else class="border-edge bg-surface-raised h-64 w-full rounded-lg border" />
 
           <!-- Title -->
-          <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100">
+          <h1 class="text-content text-3xl font-bold">
             {{ post.title }}
           </h1>
 
@@ -126,16 +123,14 @@ useHead({
           </div>
 
           <!-- Date -->
-          <p class="text-sm text-gray-500 dark:text-gray-400">
+          <p class="text-content-muted text-sm">
             {{ formattedDate }}
           </p>
 
           <!-- Reading time -->
-          <p class="text-sm text-gray-500 dark:text-gray-400">
-            {{ readingTime }} {{ $t("blog.min-read") }}
-          </p>
+          <p class="text-content-muted text-sm">{{ readingTime }} {{ $t("blog.min-read") }}</p>
 
-          <hr class="border-gray-300 dark:border-gray-700" />
+          <hr class="border-edge-soft" />
 
           <!-- Article body -->
           <div class="prose prose-gray prose-headings:font-semibold max-w-none">
@@ -144,8 +139,8 @@ useHead({
 
           <!-- Related posts -->
           <template v-if="relatedPosts.length">
-            <hr class="border-gray-300 dark:border-gray-700" />
-            <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100">
+            <hr class="border-edge-soft" />
+            <h2 class="text-content text-xl font-semibold">
               {{ $t("blog.more-posts") }}
             </h2>
             <div class="flex flex-col gap-4">

@@ -18,10 +18,10 @@ const { tech } = defineProps<Props>();
       </div>
       <div class="flex flex-col gap-4">
         <div class="flex flex-col gap-2">
-          <h2 class="text-left text-xl font-medium text-gray-900 dark:text-gray-100">
+          <h2 class="text-content text-left text-xl font-medium">
             {{ tech.name }}
           </h2>
-          <p class="text-left text-gray-900 dark:text-gray-100">{{ tech.description }}</p>
+          <p class="text-content text-left">{{ tech.description }}</p>
         </div>
       </div>
     </div>

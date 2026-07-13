@@ -21,7 +21,7 @@ withDefaults(
       :href="link.url"
       target="_blank"
       rel="noopener noreferrer"
-      class="hover:text-primary active:text-primary dark:hover:text-primary dark:active:text-primary rounded-lg text-gray-600 dark:text-gray-400"
+      class="hover:text-primary active:text-primary dark:hover:text-primary dark:active:text-primary text-content-secondary rounded-lg"
       :class="size === 'sm' ? 'p-1.5' : 'p-2'"
     >
       <GithubIcon

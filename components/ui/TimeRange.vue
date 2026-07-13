@@ -12,7 +12,7 @@ defineProps<{
 </script>
 
 <template>
-  <p class="text-left text-sm text-gray-900 dark:text-gray-100">
+  <p class="text-content text-left text-sm">
     {{ `${start.month} ${start.year}` }} –
     {{ current ? $t("common.present") : end ? `${end.month} ${end.year}` : "" }}
   </p>

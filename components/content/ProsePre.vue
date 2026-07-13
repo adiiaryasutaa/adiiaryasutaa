@@ -21,19 +21,19 @@ const copy = async (code: string) => {
 </script>
 
 <template>
-  <div class="my-5 overflow-hidden rounded-lg border border-gray-300 dark:border-[#444c56]">
+  <div class="border-edge-soft my-5 overflow-hidden rounded-lg border dark:border-[#444c56]">
     <!-- Header bar -->
     <div
-      class="flex items-center justify-between border-b border-gray-300 bg-gray-100 px-4 py-2 dark:border-[#444c56] dark:bg-[#1c2128]"
+      class="border-edge-soft bg-surface flex items-center justify-between border-b px-4 py-2 dark:border-[#444c56] dark:bg-[#1c2128]"
     >
-      <span class="font-mono text-xs text-gray-500 dark:text-gray-400">
+      <span class="text-content-muted font-mono text-xs">
         {{ filename ?? language ?? "code" }}
       </span>
       <button
         v-if="code"
         @click="copy(code)"
         :aria-label="copied ? 'Copied!' : 'Copy code'"
-        class="flex cursor-pointer items-center gap-1.5 text-xs text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+        class="text-content-muted hover:text-content flex cursor-pointer items-center gap-1.5 text-xs transition-colors"
       >
         <CheckIcon v-if="copied" class="h-3.5 w-3.5" />
         <ClipboardIcon v-else class="h-3.5 w-3.5" />

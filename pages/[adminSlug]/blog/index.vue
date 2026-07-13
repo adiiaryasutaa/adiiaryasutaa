@@ -30,7 +30,7 @@ function slugFromName(name: string) {
 <template>
   <AdminShell>
     <div class="mb-6 flex items-center justify-between">
-      <h1 class="text-xl font-bold text-gray-900 dark:text-gray-100">Blog Posts</h1>
+      <h1 class="text-content text-xl font-bold">Blog Posts</h1>
       <NuxtLink
         :to="`/${slug}/blog/new`"
         class="bg-primary hover:bg-primary/90 rounded-lg px-4 py-2 text-sm font-medium text-white"
@@ -39,11 +39,11 @@ function slugFromName(name: string) {
       </NuxtLink>
     </div>
 
-    <div v-if="!posts?.length" class="py-12 text-center text-gray-400">No posts yet.</div>
+    <div v-if="!posts?.length" class="text-content-muted py-12 text-center">No posts yet.</div>
 
     <div
       v-else
-      class="flex flex-col divide-y divide-gray-200 rounded-xl border border-gray-200 bg-white dark:divide-gray-800 dark:border-gray-800 dark:bg-gray-900"
+      class="divide-edge-soft border-edge-soft flex flex-col divide-y rounded-xl border bg-white"
     >
       <div
         v-for="post in posts"
@@ -51,8 +51,8 @@ function slugFromName(name: string) {
         class="flex items-center justify-between px-5 py-4"
       >
         <div>
-          <p class="font-medium text-gray-900 dark:text-gray-100">{{ slugFromName(post.name) }}</p>
-          <p class="text-xs text-gray-400">{{ post.path }}</p>
+          <p class="text-content font-medium">{{ slugFromName(post.name) }}</p>
+          <p class="text-content-muted text-xs">{{ post.path }}</p>
         </div>
         <div class="flex gap-3">
           <NuxtLink

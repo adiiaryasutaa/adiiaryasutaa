@@ -16,7 +16,7 @@ const techs = allTech();
           v-for="tech in Object.keys(techs) as (keyof typeof techs)[]"
           :key="tech"
         >
-          <h2 class="text-left text-2xl font-medium text-gray-900 capitalize dark:text-gray-100">
+          <h2 class="text-content text-left text-2xl font-medium capitalize">
             {{ tech }}
           </h2>
           <div class="flex flex-col gap-4">

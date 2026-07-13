@@ -5,21 +5,52 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Semantic color tokens: one class per role, values flip under .dark.
+   Retheme dark mode by editing the .dark block only. */
 :root {
   --primary: #0369a1; /* sky-700 — 5.9:1 contrast on white, passes WCAG AA */
   --primary-tint: #e0f2fe; /* sky-100 */
   --grid-line: rgb(156 163 175 / 0.35); /* gray-400 */
+
+  --canvas: var(--color-gray-200);
+  --sheet: var(--color-gray-50);
+  --surface: var(--color-gray-100);
+  --surface-raised: var(--color-gray-200);
+  --content: var(--color-gray-900);
+  --content-secondary: var(--color-gray-700);
+  --content-muted: var(--color-gray-500);
+  --edge: var(--color-gray-400);
+  --edge-soft: var(--color-gray-300);
 }
 
 .dark {
   --primary: #38bdf8; /* sky-400 */
   --primary-tint: #0c4a6e; /* sky-900 */
   --grid-line: rgb(255 255 255 / 0.05);
+
+  --canvas: var(--color-stone-950);
+  --sheet: var(--color-stone-900);
+  --surface: var(--color-stone-950);
+  --surface-raised: var(--color-stone-800);
+  --content: var(--color-stone-100);
+  --content-secondary: var(--color-stone-300);
+  --content-muted: var(--color-stone-400);
+  --edge: var(--color-stone-600);
+  --edge-soft: var(--color-stone-700);
 }
 
 @theme inline {
   --color-primary: var(--primary);
   --color-primary-tint: var(--primary-tint);
+  --color-canvas: var(--canvas);
+  --color-sheet: var(--sheet);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-content: var(--content);
+  --color-content-secondary: var(--content-secondary);
+  --color-content-muted: var(--content-muted);
+  --color-edge: var(--edge);
+  --color-edge-soft: var(--edge-soft);
 }
 
 @theme {
@@ -53,7 +84,7 @@
 /* Shared surface: one source of truth for the bordered card/pill style
    reused by Card, Navbar, and control buttons. Padding stays per-use. */
 @utility surface {
-  @apply rounded-lg border border-gray-400 bg-gray-100 dark:border-gray-600 dark:bg-gray-950;
+  @apply border-edge bg-surface rounded-lg border;
 }
 
 /* Consistent keyboard focus ring, driven by --primary. */
@@ -98,23 +129,11 @@
   }
 
   body::-webkit-scrollbar-track {
-    background-color: var(--color-gray-200);
+    background-color: var(--color-surface-raised);
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: var(--color-gray-400);
-  }
-
-  body::-webkit-scrollbar-thumb:hover {
-    background-color: var(--color-gray-400);
-  }
-
-  html.dark body::-webkit-scrollbar-track {
-    background-color: var(--color-gray-800);
-  }
-
-  html.dark body::-webkit-scrollbar-thumb {
-    background-color: var(--color-gray-600);
+    background-color: var(--color-edge);
   }
 }
 
@@ -139,25 +158,25 @@
 
 .dark .prose pre.shiki {
   background-color: #24292e;
-  --tw-prose-pre-code: var(--color-gray-300);
+  --tw-prose-pre-code: var(--color-stone-300);
 }
 
 .dark .prose {
-  --tw-prose-body: var(--color-gray-300);
-  --tw-prose-headings: var(--color-gray-100);
-  --tw-prose-lead: var(--color-gray-400);
-  --tw-prose-links: var(--color-gray-100);
-  --tw-prose-bold: var(--color-gray-100);
-  --tw-prose-counters: var(--color-gray-400);
-  --tw-prose-bullets: var(--color-gray-500);
-  --tw-prose-hr: var(--color-gray-700);
-  --tw-prose-quotes: var(--color-gray-200);
-  --tw-prose-quote-borders: var(--color-gray-700);
-  --tw-prose-captions: var(--color-gray-400);
-  --tw-prose-code: var(--color-gray-200);
-  --tw-prose-pre-bg: var(--color-gray-800);
-  --tw-prose-th-borders: var(--color-gray-600);
-  --tw-prose-td-borders: var(--color-gray-700);
+  --tw-prose-body: var(--color-stone-300);
+  --tw-prose-headings: var(--color-stone-100);
+  --tw-prose-lead: var(--color-stone-400);
+  --tw-prose-links: var(--color-stone-100);
+  --tw-prose-bold: var(--color-stone-100);
+  --tw-prose-counters: var(--color-stone-400);
+  --tw-prose-bullets: var(--color-stone-500);
+  --tw-prose-hr: var(--color-stone-700);
+  --tw-prose-quotes: var(--color-stone-200);
+  --tw-prose-quote-borders: var(--color-stone-700);
+  --tw-prose-captions: var(--color-stone-400);
+  --tw-prose-code: var(--color-stone-200);
+  --tw-prose-pre-bg: var(--color-stone-800);
+  --tw-prose-th-borders: var(--color-stone-600);
+  --tw-prose-td-borders: var(--color-stone-700);
 }
 
 .fade-enter-active,

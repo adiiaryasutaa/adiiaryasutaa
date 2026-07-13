@@ -21,16 +21,14 @@ function removeItem(section: "highlight" | "other", i: number) {
 
 <template>
   <AdminShell>
-    <h1 class="mb-6 text-xl font-bold text-gray-900 dark:text-gray-100">Skills</h1>
+    <h1 class="text-content mb-6 text-xl font-bold">Skills</h1>
 
-    <div v-if="loading && !data" class="py-12 text-center text-gray-400">Loading…</div>
+    <div v-if="loading && !data" class="text-content-muted py-12 text-center">Loading…</div>
 
     <div v-else-if="data" class="flex flex-col gap-8">
       <section v-for="section in ['highlight', 'other'] as const" :key="section">
         <div class="mb-3 flex items-center justify-between">
-          <h2 class="font-semibold text-gray-800 capitalize dark:text-gray-200">
-            {{ section }} skills
-          </h2>
+          <h2 class="text-content font-semibold capitalize">{{ section }} skills</h2>
           <button class="text-primary text-sm hover:underline" @click="addItem(section)">
             + Add
           </button>
@@ -40,31 +38,31 @@ function removeItem(section: "highlight" | "other", i: number) {
           <div
             v-for="(item, i) in data[section].data"
             :key="i"
-            class="flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900"
+            class="border-edge-soft flex items-start gap-3 rounded-xl border bg-white p-4"
           >
             <img v-if="item.logo" :src="item.logo" class="mt-1 h-8 w-8 object-contain" />
             <div class="flex flex-1 flex-col gap-2">
               <div class="grid gap-2 sm:grid-cols-2">
                 <div>
-                  <label class="mb-1 block text-xs text-gray-500">Logo URL</label>
+                  <label class="text-content-muted mb-1 block text-xs">Logo URL</label>
                   <input
                     v-model="item.logo"
-                    class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                    class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                   />
                 </div>
                 <div>
-                  <label class="mb-1 block text-xs text-gray-500">Name</label>
+                  <label class="text-content-muted mb-1 block text-xs">Name</label>
                   <input
                     v-model="item.name"
-                    class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                    class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                   />
                 </div>
                 <div v-if="section === 'highlight'" class="sm:col-span-2">
-                  <label class="mb-1 block text-xs text-gray-500">Description</label>
+                  <label class="text-content-muted mb-1 block text-xs">Description</label>
                   <textarea
                     v-model="item.description"
                     rows="2"
-                    class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+                    class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-1.5 text-sm"
                   />
                 </div>
               </div>

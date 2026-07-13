@@ -43,19 +43,19 @@ const sidebarOpen = ref(false);
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50 dark:bg-gray-950">
+  <div class="bg-sheet min-h-screen">
     <!-- Top bar -->
     <header
-      class="fixed inset-x-0 top-0 z-30 flex h-14 items-center justify-between border-b border-gray-200 bg-white px-4 dark:border-gray-800 dark:bg-gray-900"
+      class="border-edge-soft fixed inset-x-0 top-0 z-30 flex h-14 items-center justify-between border-b bg-white px-4"
     >
       <div class="flex items-center gap-3">
         <button
-          class="rounded p-1 text-gray-500 hover:bg-gray-100 lg:hidden dark:hover:bg-gray-800"
+          class="text-content-muted hover:bg-surface rounded p-1 lg:hidden"
           @click="sidebarOpen = !sidebarOpen"
         >
           <Bars3Icon class="h-5 w-5" />
         </button>
-        <span class="font-semibold text-gray-900 dark:text-gray-100">Admin Panel</span>
+        <span class="text-content font-semibold">Admin Panel</span>
       </div>
       <div class="flex items-center gap-3">
         <img
@@ -64,9 +64,9 @@ const sidebarOpen = ref(false);
           :alt="user.login"
           class="h-8 w-8 rounded-full"
         />
-        <span class="text-sm text-gray-600 dark:text-gray-400">{{ user?.login }}</span>
+        <span class="text-content-secondary text-sm">{{ user?.login }}</span>
         <button
-          class="rounded px-3 py-1 text-sm text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800"
+          class="text-content-muted hover:bg-surface rounded px-3 py-1 text-sm"
           @click="logout"
         >
           Logout
@@ -77,7 +77,7 @@ const sidebarOpen = ref(false);
     <!-- Sidebar -->
     <aside
       :class="[
-        'fixed inset-y-0 left-0 z-20 w-56 transform border-r border-gray-200 bg-white pt-14 transition-transform dark:border-gray-800 dark:bg-gray-900',
+        'border-edge-soft fixed inset-y-0 left-0 z-20 w-56 transform border-r bg-white pt-14 transition-transform',
         sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0',
       ]"
     >
@@ -86,7 +86,7 @@ const sidebarOpen = ref(false);
           v-for="item in nav"
           :key="item.to"
           :to="item.to"
-          class="flex items-center gap-2.5 rounded-md px-3 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+          class="text-content-secondary hover:bg-surface flex items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors"
           :class="{
             'bg-primary/10 text-primary dark:text-primary font-medium':
               route.path === item.to || (item.to !== `/${slug}` && route.path.startsWith(item.to)),

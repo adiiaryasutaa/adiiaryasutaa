@@ -13,7 +13,7 @@ const { tool } = defineProps<Props>();
     class="hover:border-primary hover:bg-primary-tint active:border-primary active:bg-primary transition-colors"
   >
     <img :src="tool.logo" :alt="tool.name" class="rounded-lg" />
-    <h4 class="mt-2 text-center font-medium text-gray-900 capitalize dark:text-gray-100">
+    <h4 class="text-content mt-2 text-center font-medium capitalize">
       {{ tool.name }}
     </h4>
   </Card>

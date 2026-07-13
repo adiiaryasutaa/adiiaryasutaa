@@ -1,5 +1,5 @@
 <template>
-  <p class="leading-relaxed tracking-wide text-gray-700 md:mt-0 xl:text-lg dark:text-gray-300">
+  <p class="text-content-secondary leading-relaxed tracking-wide md:mt-0 xl:text-lg">
     <slot />
   </p>
 </template>

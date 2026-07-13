@@ -16,15 +16,15 @@ const { friend } = defineProps<Props>();
       <img
         :src="friend.photo"
         :alt="friend.name"
-        class="h-14 w-14 shrink-0 rounded-full border border-gray-400 object-cover dark:border-gray-600"
+        class="border-edge h-14 w-14 shrink-0 rounded-full border object-cover"
       />
 
       <div class="flex min-w-0 flex-col gap-1">
         <div class="flex flex-col gap-0.5">
-          <h3 class="truncate font-semibold text-gray-900 dark:text-gray-100">
+          <h3 class="text-content truncate font-semibold">
             {{ friend.name }}
           </h3>
-          <p class="truncate text-sm text-gray-500 dark:text-gray-400">
+          <p class="text-content-muted truncate text-sm">
             {{ friend.jobTitle }}
           </p>
         </div>

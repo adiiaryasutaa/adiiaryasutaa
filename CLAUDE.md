@@ -58,8 +58,8 @@ Pages (`about`, `project`, `blog`, `friend`) can be toggled on/off from the admi
 
 ### Styling
 
-- TailwindCSS 4 with Vite plugin (`@tailwindcss/vite`)
-- Custom CSS in `assets/css/main.css` (defines `--primary` CSS var and base styles)
+- TailwindCSS 4 with Vite plugin (`@tailwindcss/vite`), CSS-first config — there is no `tailwind.config.ts`; theme, dark variant (`@custom-variant dark`), and utilities all live in `assets/css/main.css`
+- **Semantic color tokens** in `main.css`: `canvas`, `sheet`, `surface`, `surface-raised`, `content`, `content-secondary`, `content-muted`, `edge`, `edge-soft` — used as `text-content`, `bg-surface`, `border-edge`, etc. Values are defined once in `:root` (gray palette) and flipped in `.dark` (stone palette); components never use `dark:` variants for neutral colors. To retheme dark mode, edit the `.dark` var block only. Non-token neutrals are rare deliberate one-offs (admin login CTA, admin toggle track, i18n table divider, 404 watermark)
 - Dark mode via `@nuxtjs/color-mode` (`classSuffix: ""`, fallback: `light`)
 - **TailwindCSS v4 note**: uses CSS `translate` property (not `transform`) for translate utilities — use scoped CSS for scroll-hide transitions
 - Page transitions enabled (`name: "page", mode: "out-in"`)

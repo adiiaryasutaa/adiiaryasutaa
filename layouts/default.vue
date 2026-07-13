@@ -1,13 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div
-    class="bg-grid bg-gray-200 selection:bg-gray-300 dark:bg-gray-950 dark:selection:bg-gray-700"
-  >
+  <div class="bg-grid bg-canvas selection:bg-surface-raised">
     <div class="sm:container sm:mx-auto">
-      <div
-        class="mx-auto flex min-h-screen max-w-6xl flex-col border-gray-400 bg-gray-50 sm:border-x dark:border-gray-600 dark:bg-gray-900"
-      >
+      <div class="border-edge bg-sheet mx-auto flex min-h-screen max-w-6xl flex-col sm:border-x">
         <Navbar />
         <div class="grow overflow-hidden">
           <slot />

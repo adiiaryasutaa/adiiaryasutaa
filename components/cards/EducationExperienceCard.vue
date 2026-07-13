@@ -23,12 +23,12 @@ const { education } = defineProps<Props>();
       </div>
       <div class="flex max-w-prose flex-col gap-4">
         <div class="flex flex-col">
-          <h2 class="text-left text-xl font-medium text-gray-900 dark:text-gray-100">
+          <h2 class="text-content text-left text-xl font-medium">
             {{ education.school }}
           </h2>
-          <h3 class="text-left text-gray-900 dark:text-gray-100">{{ education.major }}</h3>
+          <h3 class="text-content text-left">{{ education.major }}</h3>
           <div class="flex flex-row">
-            <p class="text-left text-sm text-gray-900 dark:text-gray-100">
+            <p class="text-content text-left text-sm">
               {{ education.start }} - {{ education.end }}
             </p>
           </div>

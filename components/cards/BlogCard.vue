@@ -32,29 +32,29 @@ const formattedDate = computed(() =>
             v-if="post.cover"
             :src="post.cover"
             :alt="post.title"
-            class="aspect-video w-full rounded-lg border border-gray-400 object-cover md:aspect-auto md:h-full dark:border-gray-600"
+            class="border-edge aspect-video w-full rounded-lg border object-cover md:aspect-auto md:h-full"
           />
           <div
             v-else
-            class="aspect-video w-full rounded-lg border border-gray-400 bg-gray-200 md:aspect-auto md:h-full dark:border-gray-600 dark:bg-gray-800"
+            class="border-edge bg-surface-raised aspect-video w-full rounded-lg border md:aspect-auto md:h-full"
           />
         </div>
 
         <div class="flex grow flex-col gap-3">
           <div class="flex flex-col gap-1">
             <h2
-              class="group-hover:text-primary text-xl font-semibold tracking-tight text-gray-900 transition-colors duration-200 dark:text-gray-100"
+              class="group-hover:text-primary text-content text-xl font-semibold tracking-tight transition-colors duration-200"
             >
               {{ post.title }}
             </h2>
-            <p class="leading-relaxed text-gray-600 dark:text-gray-400">
+            <p class="text-content-secondary leading-relaxed">
               {{ post.description }}
             </p>
           </div>
 
           <TagList :tags="post.tags" />
 
-          <p class="mt-auto text-sm text-gray-500 dark:text-gray-500">
+          <p class="text-content-muted mt-auto text-sm">
             {{ formattedDate }}
           </p>
         </div>

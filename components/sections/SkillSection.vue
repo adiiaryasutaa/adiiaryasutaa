@@ -12,13 +12,13 @@ const otherSkills = allOtherSkills();
         <ContainerTitle>{{ $t("about.skill-section-title") }}</ContainerTitle>
       </template>
       <div class="flex flex-col gap-2">
-        <h1 class="text-left text-2xl font-medium text-gray-900 dark:text-gray-100">Highlight</h1>
+        <h1 class="text-content text-left text-2xl font-medium">Highlight</h1>
         <div class="flex flex-col gap-4">
           <HighlightTechCard v-for="skill in highlightSkills" :skill="skill" />
         </div>
       </div>
       <div class="flex flex-col gap-2">
-        <h1 class="text-left text-2xl font-medium text-gray-900 dark:text-gray-100">Other</h1>
+        <h1 class="text-content text-left text-2xl font-medium">Other</h1>
         <div
           class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mt-6 md:grid-cols-4 lg:mt-8 lg:grid-cols-5 xl:mt-10 xl:grid-cols-6"
         >

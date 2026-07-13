@@ -11,10 +11,10 @@ const bioParagraphs = computed(() => (tm("about.description") as unknown[]).map(
         <img
           src="/assets/images/adiaryasuta.jpg"
           :alt="$t('brand')"
-          class="h-60 w-60 rounded-lg border border-gray-400 object-cover xl:h-72 xl:w-72 dark:border-gray-600"
+          class="border-edge h-60 w-60 rounded-lg border object-cover xl:h-72 xl:w-72"
         />
       </div>
-      <div class="mt-10 max-w-prose space-y-4 text-gray-700 md:mt-0 md:ml-10 dark:text-gray-300">
+      <div class="text-content-secondary mt-10 max-w-prose space-y-4 md:mt-0 md:ml-10">
         <Paragraph v-for="(paragraph, i) in bioParagraphs" :key="i">{{ paragraph }}</Paragraph>
       </div>
     </div>

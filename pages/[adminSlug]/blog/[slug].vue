@@ -98,10 +98,12 @@ function removeTag(i: number) {
   <AdminShell>
     <div class="mb-6 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <NuxtLink :to="`/${adminSlug}/blog`" class="text-sm text-gray-400 hover:text-gray-600"
+        <NuxtLink
+          :to="`/${adminSlug}/blog`"
+          class="text-content-muted hover:text-content-secondary text-sm"
           >← Blog</NuxtLink
         >
-        <h1 class="text-xl font-bold text-gray-900 dark:text-gray-100">
+        <h1 class="text-content text-xl font-bold">
           {{ isNew ? "New Post" : postSlug }}
         </h1>
       </div>
@@ -122,55 +124,49 @@ function removeTag(i: number) {
     </div>
 
     <!-- Frontmatter form -->
-    <div
-      class="mb-6 grid gap-4 rounded-xl border border-gray-200 bg-white p-5 sm:grid-cols-2 dark:border-gray-800 dark:bg-gray-900"
-    >
+    <div class="border-edge-soft mb-6 grid gap-4 rounded-xl border bg-white p-5 sm:grid-cols-2">
       <div v-if="isNew" class="sm:col-span-2">
-        <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400"
+        <label class="text-content-secondary mb-1 block text-xs font-medium"
           >Slug (filename, no spaces)</label
         >
         <input
           v-model="newSlug"
           placeholder="my-new-post"
-          class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+          class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-2 text-sm"
         />
       </div>
       <div>
-        <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400">Title</label>
+        <label class="text-content-secondary mb-1 block text-xs font-medium">Title</label>
         <input
           v-model="title"
-          class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+          class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-2 text-sm"
         />
       </div>
       <div>
-        <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400">Date</label>
+        <label class="text-content-secondary mb-1 block text-xs font-medium">Date</label>
         <input
           v-model="date"
           type="date"
-          class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+          class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-2 text-sm"
         />
       </div>
       <div class="sm:col-span-2">
-        <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400"
-          >Description</label
-        >
+        <label class="text-content-secondary mb-1 block text-xs font-medium">Description</label>
         <input
           v-model="description"
-          class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+          class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-2 text-sm"
         />
       </div>
       <div>
-        <label class="mb-1 block text-xs font-medium text-gray-600 dark:text-gray-400"
-          >Cover image URL</label
-        >
+        <label class="text-content-secondary mb-1 block text-xs font-medium">Cover image URL</label>
         <input
           v-model="cover"
-          class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+          class="border-edge-soft bg-sheet w-full rounded-lg border px-3 py-2 text-sm"
         />
       </div>
       <div>
         <label
-          class="mb-1 flex items-center justify-between text-xs font-medium text-gray-600 dark:text-gray-400"
+          class="text-content-secondary mb-1 flex items-center justify-between text-xs font-medium"
         >
           Tags
           <button class="text-primary hover:underline" @click="addTag">+ Add</button>
@@ -180,7 +176,7 @@ function removeTag(i: number) {
             v-for="(tag, ti) in tags"
             :key="ti"
             v-model="tags[ti]"
-            class="w-24 rounded-lg border border-gray-200 bg-gray-50 px-2 py-1.5 text-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+            class="border-edge-soft bg-sheet w-24 rounded-lg border px-2 py-1.5 text-sm"
           />
           <button
             v-if="tags.length"
@@ -196,22 +192,18 @@ function removeTag(i: number) {
     <!-- Two-pane editor -->
     <div class="grid gap-4 lg:grid-cols-2">
       <div>
-        <label class="mb-2 block text-xs font-medium text-gray-600 dark:text-gray-400"
-          >Markdown</label
-        >
+        <label class="text-content-secondary mb-2 block text-xs font-medium">Markdown</label>
         <textarea
           v-model="body"
-          class="h-[60vh] w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-mono text-sm leading-relaxed dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100"
+          class="border-edge-soft h-[60vh] w-full rounded-xl border bg-white px-4 py-3 font-mono text-sm leading-relaxed"
         />
       </div>
       <div>
-        <label class="mb-2 block text-xs font-medium text-gray-600 dark:text-gray-400"
-          >Preview</label
-        >
+        <label class="text-content-secondary mb-2 block text-xs font-medium">Preview</label>
         <div
-          class="prose prose-gray prose-headings:font-semibold dark:prose-invert h-[60vh] max-w-none overflow-y-auto rounded-xl border border-gray-200 bg-white px-4 py-3 dark:border-gray-800 dark:bg-gray-900"
+          class="prose prose-gray prose-headings:font-semibold dark:prose-invert border-edge-soft h-[60vh] max-w-none overflow-y-auto rounded-xl border bg-white px-4 py-3"
         >
-          <p class="text-sm text-gray-400 italic">
+          <p class="text-content-muted text-sm italic">
             Preview requires server-rendering. Save to see the rendered post.
           </p>
         </div>

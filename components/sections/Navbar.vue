@@ -59,7 +59,7 @@ onUnmounted(() => {
           <img
             src="/assets/imgs/adiaryasuta.jpg"
             alt="Adi Aryasuta"
-            class="h-10 w-10 rounded-full border border-gray-400 transition-all duration-300 dark:border-gray-600"
+            class="border-edge h-10 w-10 rounded-full border transition-all duration-300"
             :class="
               router.currentRoute.value.path === '/'
                 ? 'pointer-events-none scale-75 opacity-0'
@@ -89,7 +89,7 @@ onUnmounted(() => {
           <ThemeButton />
           <button
             @click="toggleNavigation"
-            class="surface focus-ring hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary p-2 text-gray-500 hover:cursor-pointer hover:bg-gray-300 md:hidden dark:text-gray-500 dark:hover:bg-gray-900"
+            class="surface focus-ring hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary text-content-muted hover:bg-surface-raised p-2 hover:cursor-pointer md:hidden"
           >
             <XMarkIcon v-if="showNavigation" class="h-5 w-5" />
             <Bars3Icon v-else class="h-5 w-5" />
@@ -118,6 +118,6 @@ onUnmounted(() => {
 }
 
 .navbar-nav > a:not(.router-link-active.router-link-exact-active):not(.partial-active) {
-  @apply hover:text-primary active:text-primary dark:hover:text-primary dark:active:text-primary text-gray-500 dark:text-gray-400;
+  @apply hover:text-primary active:text-primary dark:hover:text-primary dark:active:text-primary text-content-muted;
 }
 </style>

@@ -15,7 +15,7 @@ onMounted(() => {
 <template>
   <button
     @click="switchTheme"
-    class="surface focus-ring hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary p-2 text-gray-500 hover:cursor-pointer hover:bg-gray-300 dark:text-gray-500 dark:hover:bg-gray-900"
+    class="surface focus-ring hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary text-content-muted hover:bg-surface-raised p-2 hover:cursor-pointer"
   >
     <SunIcon v-if="theme === 'dark'" class="h-5 w-5" />
     <MoonIcon v-else class="h-5 w-5" />

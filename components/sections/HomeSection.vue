@@ -9,7 +9,7 @@
         <div class="flex flex-col space-y-4">
           <div>
             <h1
-              class="text-3xl leading-tight font-semibold tracking-tight text-balance text-gray-800 lg:text-4xl dark:text-gray-200"
+              class="text-content text-3xl leading-tight font-semibold tracking-tight text-balance lg:text-4xl"
             >
               {{ $t("home.brand") }}
             </h1>
@@ -26,11 +26,9 @@
                 <img
                   src="/assets/imgs/gdg.webp"
                   alt="GDG Logo"
-                  class="h-10 w-10 rounded-lg border border-gray-400 dark:border-gray-600"
+                  class="border-edge h-10 w-10 rounded-lg border"
                 />
-                <span class="text-sm font-bold text-gray-900 dark:text-gray-50">{{
-                  $t("home.gdg-lead")
-                }}</span>
+                <span class="text-content text-sm font-bold">{{ $t("home.gdg-lead") }}</span>
               </div>
             </div>
           </a>
@@ -48,7 +46,7 @@
           <div>
             <NuxtLink
               to="/about"
-              class="focus-ring hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary rounded-lg border border-gray-400 px-4 py-2 text-sm font-medium transition-colors duration-200 hover:bg-gray-100 active:bg-gray-200 dark:border-gray-600 dark:text-gray-50 dark:hover:bg-gray-900 dark:active:bg-gray-800"
+              class="focus-ring hover:text-primary hover:border-primary dark:hover:text-primary dark:hover:border-primary border-edge hover:bg-surface active:bg-surface-raised rounded-lg border px-4 py-2 text-sm font-medium transition-colors duration-200"
             >
               {{ $t("home.see-more") }}
             </NuxtLink>
@@ -60,7 +58,7 @@
         <img
           src="/assets/imgs/adiaryasuta.jpg"
           alt="Adi Aryasuta"
-          class="h-40 w-40 rounded-full border border-gray-400 md:h-64 md:w-64 lg:h-80 lg:w-80 dark:border-gray-600"
+          class="border-edge h-40 w-40 rounded-full border md:h-64 md:w-64 lg:h-80 lg:w-80"
         />
       </div>
     </div>

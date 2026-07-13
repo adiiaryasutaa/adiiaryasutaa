@@ -15,18 +15,18 @@ defineEmits<{
   <Transition name="savebar">
     <div
       v-if="isDirty || saved"
-      class="fixed inset-x-0 bottom-0 z-40 flex items-center justify-between border-t border-gray-200 bg-white px-6 py-3 shadow-lg dark:border-gray-800 dark:bg-gray-900"
+      class="border-edge-soft fixed inset-x-0 bottom-0 z-40 flex items-center justify-between border-t bg-white px-6 py-3 shadow-lg"
     >
       <span v-if="saved" class="text-sm text-green-600 dark:text-green-400">
         ✓ Saved — site will redeploy in ~30s
       </span>
-      <span v-else class="text-sm text-gray-500 dark:text-gray-400"> Unsaved changes </span>
+      <span v-else class="text-content-muted text-sm"> Unsaved changes </span>
 
       <div class="flex gap-3">
         <button
           v-if="isDirty"
           :disabled="loading"
-          class="rounded-md px-4 py-1.5 text-sm text-gray-600 hover:bg-gray-100 disabled:opacity-50 dark:text-gray-400 dark:hover:bg-gray-800"
+          class="text-content-secondary hover:bg-surface rounded-md px-4 py-1.5 text-sm disabled:opacity-50"
           @click="$emit('discard')"
         >
           Discard

@@ -15,7 +15,7 @@ const educations = allEducation();
     </template>
     <div class="flex flex-col gap-8 pt-4">
       <div class="flex flex-col gap-2">
-        <h1 class="text-left text-2xl font-medium text-gray-900 dark:text-gray-100">
+        <h1 class="text-content text-left text-2xl font-medium">
           {{ $t("about.experience-work") }}
         </h1>
         <div class="flex flex-col gap-4">
@@ -23,7 +23,7 @@ const educations = allEducation();
         </div>
       </div>
       <div class="flex flex-col gap-2">
-        <h1 class="text-left text-2xl font-medium text-gray-900 dark:text-gray-100">
+        <h1 class="text-content text-left text-2xl font-medium">
           {{ $t("about.experience-volunteer") }}
         </h1>
         <div class="flex flex-col gap-4">
@@ -31,7 +31,7 @@ const educations = allEducation();
         </div>
       </div>
       <div class="flex flex-col gap-2">
-        <h1 class="text-left text-2xl font-medium text-gray-900 dark:text-gray-100">
+        <h1 class="text-content text-left text-2xl font-medium">
           {{ $t("about.experience-education") }}
         </h1>
         <div class="flex flex-col gap-4">

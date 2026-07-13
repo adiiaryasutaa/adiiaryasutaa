@@ -23,17 +23,17 @@ const { work } = defineProps<Props>();
       </div>
       <div class="flex max-w-prose flex-col gap-4">
         <div class="flex flex-col">
-          <h2 class="text-left text-xl font-medium text-gray-900 dark:text-gray-100">
+          <h2 class="text-content text-left text-xl font-medium">
             {{ work.title }}
           </h2>
-          <h3 class="text-left text-gray-900 dark:text-gray-100">
+          <h3 class="text-content text-left">
             {{ work.company }}
           </h3>
           <div class="flex flex-col sm:flex-row sm:items-center">
             <span class="sm:after:mx-2 sm:after:content-['·']">
               <TimeRange :start="work.start" :end="work.end" :current="work.current" />
             </span>
-            <p class="text-left text-sm text-gray-900 dark:text-gray-100">
+            <p class="text-content text-left text-sm">
               {{ work.employment }}
             </p>
           </div>

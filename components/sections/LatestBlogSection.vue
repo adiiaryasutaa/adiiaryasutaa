@@ -24,11 +24,11 @@ const formatDate = (date: string) =>
         class="focus-ring group flex flex-col gap-1 rounded-lg py-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
       >
         <span
-          class="group-hover:text-primary group-active:text-primary font-medium text-gray-800 transition-colors duration-200 dark:text-gray-200"
+          class="group-hover:text-primary group-active:text-primary text-content font-medium transition-colors duration-200"
         >
           {{ post.title }}
         </span>
-        <span class="shrink-0 text-sm text-gray-500 dark:text-gray-500">
+        <span class="text-content-muted shrink-0 text-sm">
           {{ formatDate(post.date) }}
         </span>
       </NuxtLink>
@@ -36,7 +36,7 @@ const formatDate = (date: string) =>
       <div class="mt-4">
         <NuxtLink
           to="/blog"
-          class="focus-ring hover:text-primary active:text-primary dark:hover:text-primary dark:active:text-primary rounded-lg text-sm text-gray-500 transition-colors dark:text-gray-400"
+          class="focus-ring hover:text-primary active:text-primary dark:hover:text-primary dark:active:text-primary text-content-muted rounded-lg text-sm transition-colors"
         >
           {{ $t("home.all-posts") }} &rarr;
         </NuxtLink>

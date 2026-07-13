@@ -19,18 +19,18 @@ const pageLabels: { key: keyof PageVisibility; label: string; description: strin
 <template>
   <AdminShell>
     <div class="mb-6">
-      <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Pages</h1>
-      <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+      <h1 class="text-content text-xl font-semibold">Pages</h1>
+      <p class="text-content-muted mt-1 text-sm">
         Toggle pages on or off. Hidden pages return 404 and disappear from the navbar. Changes take
         effect after redeploy (~30s).
       </p>
     </div>
 
-    <div v-if="loading && !data" class="text-sm text-gray-500 dark:text-gray-400">Loading…</div>
+    <div v-if="loading && !data" class="text-content-muted text-sm">Loading…</div>
 
     <div
       v-else-if="data"
-      class="divide-y divide-gray-200 rounded-lg border border-gray-200 bg-white dark:divide-gray-800 dark:border-gray-800 dark:bg-gray-900"
+      class="divide-edge-soft border-edge-soft divide-y rounded-lg border bg-white"
     >
       <div
         v-for="page in pageLabels"
@@ -38,8 +38,8 @@ const pageLabels: { key: keyof PageVisibility; label: string; description: strin
         class="flex items-center justify-between px-5 py-4"
       >
         <div>
-          <p class="font-medium text-gray-900 dark:text-gray-100">{{ page.label }}</p>
-          <p class="text-sm text-gray-500 dark:text-gray-400">{{ page.description }}</p>
+          <p class="text-content font-medium">{{ page.label }}</p>
+          <p class="text-content-muted text-sm">{{ page.description }}</p>
         </div>
         <button
           type="button"
@@ -47,7 +47,7 @@ const pageLabels: { key: keyof PageVisibility; label: string; description: strin
           :aria-checked="data[page.key]"
           :aria-label="`Toggle ${page.label} page`"
           class="focus:ring-primary relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:ring-2 focus:ring-offset-2 focus:outline-none"
-          :class="data[page.key] ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'"
+          :class="data[page.key] ? 'bg-primary' : 'bg-gray-300 dark:bg-stone-600'"
           @click="data[page.key] = !data[page.key]"
         >
           <span

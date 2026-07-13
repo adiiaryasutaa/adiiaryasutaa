@@ -18,22 +18,22 @@ const { project } = defineProps<Props>();
         <img
           :src="project.cover ?? '/assets/imgs/projects/no-image.png'"
           :alt="project.name"
-          class="aspect-video w-full rounded-lg border border-gray-400 object-cover dark:border-gray-600"
+          class="border-edge aspect-video w-full rounded-lg border object-cover"
         />
       </div>
       <div class="flex grow flex-col gap-3">
         <div class="flex flex-col gap-1">
-          <h1 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
+          <h1 class="text-content text-xl font-semibold tracking-tight">
             {{ project.name }}
           </h1>
-          <p class="leading-relaxed text-gray-600 dark:text-gray-400">
+          <p class="text-content-secondary leading-relaxed">
             {{ project.description }}
           </p>
         </div>
         <div class="flex flex-wrap gap-2">
           <span
             v-for="tag in project.tags"
-            class="rounded-lg border border-gray-400 bg-gray-100 px-2 py-1 text-sm font-medium dark:border-gray-600 dark:bg-gray-900 dark:text-gray-400"
+            class="border-edge bg-surface rounded-lg border px-2 py-1 text-sm font-medium"
           >
             {{ tag.name }}
           </span>
@@ -43,7 +43,7 @@ const { project } = defineProps<Props>();
             v-if="project.preview"
             :href="project.preview.url"
             target="_blank"
-            class="p-1.5 text-gray-700 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200"
+            class="text-content-secondary hover:text-content p-1.5"
           >
             <GlobeAltIcon class="h-5 w-5" />
           </a>
@@ -51,7 +51,7 @@ const { project } = defineProps<Props>();
             v-if="project.repository"
             :href="project.repository.url"
             target="_blank"
-            class="p-1.5 text-gray-700 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-200"
+            class="text-content-secondary hover:text-content p-1.5"
           >
             <GithubIcon class="h-4 w-4 stroke-2" />
           </a>

@@ -23,15 +23,15 @@ const { volunteer } = defineProps<Props>();
       </div>
       <div class="flex max-w-prose flex-col gap-4">
         <div class="flex flex-col">
-          <h2 class="text-left text-xl font-medium text-gray-900 dark:text-gray-100">
+          <h2 class="text-content text-left text-xl font-medium">
             {{ volunteer.title }}
           </h2>
-          <h3 class="text-left text-gray-900 dark:text-gray-100">{{ volunteer.organization }}</h3>
+          <h3 class="text-content text-left">{{ volunteer.organization }}</h3>
           <TimeRange :start="volunteer.start" :end="volunteer.end" :current="volunteer.current" />
         </div>
 
         <div class="">
-          <p class="text-left text-gray-900 dark:text-gray-100">{{ volunteer.description }}</p>
+          <p class="text-content text-left">{{ volunteer.description }}</p>
         </div>
       </div>
     </div>
