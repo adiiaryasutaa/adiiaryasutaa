@@ -8,11 +8,13 @@
 :root {
   --primary: #0369a1; /* sky-700 — 5.9:1 contrast on white, passes WCAG AA */
   --primary-tint: #e0f2fe; /* sky-100 */
+  --grid-line: rgb(156 163 175 / 0.35); /* gray-400 */
 }
 
 .dark {
   --primary: #38bdf8; /* sky-400 */
   --primary-tint: #0c4a6e; /* sky-900 */
+  --grid-line: rgb(255 255 255 / 0.05);
 }
 
 @theme inline {
@@ -23,28 +25,16 @@
 @theme {
   --font-google-sans: "Google Sans", sans-serif;
   --font-jetbrains-mono: "JetBrains Mono", monospace;
-
-  /* --background-image-image-light: linear-gradient(
-      to right,
-      #80808012 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, #80808012 1px, transparent 1px);
-  --background-image-image-dark: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.06) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px); */
 }
-/* 
-.background-image-image-light {
-  background-color: #eef2ff;
-  opacity: 0.1;
-  background-image: linear-gradient(#4f46e5 1.5px, transparent 1.5px),
-    linear-gradient(to right, #4f46e5 1.5px, #eef2ff 1.5px);
-  background-size: 30px 30px;
-} */
+
+/* Decorative grid for the gutters outside the content sheet; the opaque
+   sheet covers the center, so this only shows on wide viewports. */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
 
 @utility container {
   margin-inline: auto;

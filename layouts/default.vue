@@ -2,7 +2,7 @@
 
 <template>
   <div
-    class="dark:background-image-image-dark bg-gray-200 selection:bg-gray-300 dark:bg-gray-950 dark:selection:bg-gray-700"
+    class="bg-grid bg-gray-200 selection:bg-gray-300 dark:bg-gray-950 dark:selection:bg-gray-700"
   >
     <div class="sm:container sm:mx-auto">
       <div
