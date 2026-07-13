@@ -119,6 +119,14 @@
 }
 
 @layer base {
+  /* No rubber-band stretch past the page edges; Safari partially ignores
+     overscroll-behavior on the root, so the themed background keeps any
+     surviving stretch area from flashing white. */
+  html {
+    overscroll-behavior-y: none;
+    background-color: var(--color-canvas);
+  }
+
   * {
     font-family: "Google Sans", sans-serif;
   }
