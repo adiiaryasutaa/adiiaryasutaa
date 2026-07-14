@@ -3,31 +3,7 @@
     {
       "title": "Lead",
       "organization": "Primakara Developers",
-      "description": "Leading a local developer community in Bali — organizing classes and events, and mentoring fellow student developers.",
-      "current": true,
-      "start": {
-        "month": "January",
-        "year": "2023"
-      },
-      "end": {},
-      "media": []
-    },
-    {
-      "title": "Head of Event Organizer",
-      "organization": "Google Developer Group on Campus Primakara University",
-      "description": "Organizing developer events and study groups for the campus GDG chapter.",
-      "current": true,
-      "start": {
-        "month": "November",
-        "year": "2024"
-      },
-      "end": {},
-      "media": []
-    },
-    {
-      "title": "Member",
-      "organization": "Informatics Study Program Student Association",
-      "description": "Active member of the Informatics study program student association at Primakara University.",
+      "description": "Leading Primakara Developers, a student developer community at Primakara University.",
       "current": true,
       "start": {
         "month": "September",
@@ -37,48 +13,27 @@
       "media": []
     },
     {
-      "title": "Instructor & Curriculum Advisor at Mini Class Basic C++",
-      "organization": "Primakara Developers",
-      "description": "Designed the curriculum and taught a C++ basics mini class.",
-      "current": false,
+      "title": "Lead",
+      "organization": "Google Developer Group on Campus Primakara University",
+      "description": "Leading the Google Developer Group on Campus chapter at Primakara University.",
+      "current": true,
       "start": {
-        "month": "December",
+        "month": "September",
         "year": "2023"
       },
-      "end": {
-        "month": "February",
-        "year": "2024"
-      },
+      "end": {},
       "media": []
     },
     {
-      "title": "Facilitator at Intermediate Back-End Class",
-      "organization": "Primakara Developers",
-      "description": "Facilitated an intermediate back-end class.",
-      "current": false,
+      "title": "Member",
+      "organization": "Informatics Study Program Student Association",
+      "description": "Member of the Informatics study program student association at Primakara University.",
+      "current": true,
       "start": {
-        "month": "January",
+        "month": "September",
         "year": "2023"
       },
-      "end": {
-        "month": "February",
-        "year": "2024"
-      },
-      "media": []
-    },
-    {
-      "title": "Facilitator at Beginner Javascript Class",
-      "organization": "Primakara Developers",
-      "description": "Facilitated a beginner JavaScript class.",
-      "current": false,
-      "start": {
-        "month": "November",
-        "year": "2023"
-      },
-      "end": {
-        "month": "January",
-        "year": "2024"
-      },
+      "end": {},
       "media": []
     }
   ]
