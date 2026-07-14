@@ -122,13 +122,10 @@ useHead({
             <TechChip v-for="tag in post.tags" :key="tag" :tech="{ name: tag }" />
           </div>
 
-          <!-- Date -->
+          <!-- Date · reading time -->
           <p class="text-content-muted text-sm">
-            {{ formattedDate }}
+            {{ formattedDate }} &middot; {{ readingTime }} {{ $t("blog.min-read") }}
           </p>
-
-          <!-- Reading time -->
-          <p class="text-content-muted text-sm">{{ readingTime }} {{ $t("blog.min-read") }}</p>
 
           <hr class="border-edge-soft" />
 

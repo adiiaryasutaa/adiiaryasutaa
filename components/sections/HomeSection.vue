@@ -3,7 +3,7 @@
 <template>
   <section class="container">
     <div
-      class="flex flex-col gap-8 md:min-h-[calc(100svh-20rem)] md:flex-row md:items-center md:justify-between md:gap-12"
+      class="flex flex-col gap-8 md:min-h-[min(calc(100svh-20rem),40rem)] md:flex-row md:items-center md:justify-between md:gap-12"
     >
       <div class="flex max-w-2xl flex-col space-y-8">
         <div class="flex flex-col space-y-4">
