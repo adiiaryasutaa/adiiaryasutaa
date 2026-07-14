@@ -21,7 +21,9 @@
             rel="noopener noreferrer"
             class="focus-ring inline-flex rounded-lg"
           >
-            <div class="surface inline-flex p-2">
+            <div
+              class="surface hover:border-primary hover:bg-primary-tint active:border-primary active:bg-primary-tint inline-flex p-2 transition-colors duration-200"
+            >
               <div class="flex items-center space-x-2">
                 <img
                   src="/assets/imgs/gdg.webp"
