@@ -25,6 +25,18 @@
       "media": []
     },
     {
+      "title": "Member",
+      "organization": "Informatics Study Program Student Association",
+      "description": "Active member of the Informatics study program student association at Primakara University.",
+      "current": true,
+      "start": {
+        "month": "September",
+        "year": "2023"
+      },
+      "end": {},
+      "media": []
+    },
+    {
       "title": "Instructor & Curriculum Advisor at Mini Class Basic C++",
       "organization": "Primakara Developers",
       "description": "Designed the curriculum and taught a C++ basics mini class.",
