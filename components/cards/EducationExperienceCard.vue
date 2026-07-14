@@ -13,7 +13,7 @@ const { education } = defineProps<Props>();
     class="hover:border-primary hover:bg-primary-tint active:border-primary active:bg-primary transition-colors"
   >
     <div class="flex flex-col gap-4 sm:flex-row">
-      <div class="flex max-w-prose flex-col gap-4">
+      <div class="flex flex-col gap-4">
         <div class="flex flex-col">
           <h2 class="text-content text-left text-xl font-medium">
             {{ education.school }}
