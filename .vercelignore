@@ -1,0 +1,13 @@
+# AI/agent instructions — GitHub-only, no deploy relevance
+CLAUDE.md
+AGENTS.md
+.claude
+
+# Design specs / docs
+docs
+README.md
+
+# Dev tooling — not used during Vercel build (nuxt build only)
+.github
+.prettierrc
+.prettierignore
