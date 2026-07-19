@@ -4,6 +4,7 @@
     "home": "Home",
     "about": "About",
     "project": "Project",
+    "gallery": "Gallery",
     "blog": "Blog",
     "friend": "Friend"
   },
@@ -39,6 +40,27 @@
   "friend": {
     "section-title": "Friends"
   },
+  "gallery": {
+    "section-title": "Gallery",
+    "empty": "No photos here yet.",
+    "lightbox-label": "Photo viewer",
+    "close": "Close",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "filter": {
+      "all": "All",
+      "volunteer": "Volunteer",
+      "work": "Work",
+      "competition": "Competition",
+      "other": "Other"
+    },
+    "alt": {
+      "volunteer": "Volunteer activity photo",
+      "work": "Work activity photo",
+      "competition": "Competition photo",
+      "other": "Activity photo"
+    }
+  },
   "blog": {
     "section-title": "Blog",
     "back": "Blog",
@@ -49,6 +71,7 @@
     "description": "Full-Stack Developer based in Bali, Indonesia, working across web, mobile, and game development with Laravel, Vue, Nuxt, Flutter, and Unity.",
     "about-description": "Learn about Adi Aryasuta — a Full-Stack Developer with experience in Vue, Nuxt, Laravel, and mobile development.",
     "project-description": "Explore projects built by Adi Aryasuta, from web apps to mobile applications.",
+    "gallery-description": "Photos from Adi Aryasuta's activities — volunteering, work, and competitions.",
     "blog-description": "Articles on web development, Vue, Nuxt, TypeScript, and software engineering by Adi Aryasuta.",
     "friend-description": "Friends and colleagues of Adi Aryasuta in the software development community."
   },

@@ -7,6 +7,7 @@ const slug = cfg.public.adminSlug;
 
 const sections = [
   { label: "Projects", to: `/${slug}/projects`, desc: "Edit portfolio projects" },
+  { label: "Gallery", to: `/${slug}/gallery`, desc: "Photos of activities" },
   { label: "Skills", to: `/${slug}/skills`, desc: "Manage skill categories" },
   { label: "Tech Stack", to: `/${slug}/tech`, desc: "Edit tech with categories" },
   { label: "Tools", to: `/${slug}/tools`, desc: "Tools you use daily" },

@@ -4,6 +4,7 @@ const ALLOWED = new Set([
   "tech",
   "tool",
   "friend",
+  "gallery",
   "experience/work",
   "experience/education",
   "experience/volunteer",
@@ -18,7 +19,9 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: `Unknown resource: ${resource}` });
   }
   const body = await readBody<{ data: unknown; sha: string }>(event);
-  if (!body?.data || !body?.sha) {
+  // The local-FS backend used in dev has no shas and returns "", which is falsy —
+  // a truthiness check here rejected every save outside production.
+  if (!body?.data || typeof body?.sha !== "string") {
     throw createError({ statusCode: 400, statusMessage: "Missing data or sha" });
   }
   const gh = useGitHub();

@@ -2,6 +2,7 @@
 import {
   HomeIcon,
   FolderIcon,
+  PhotoIcon,
   BoltIcon,
   CpuChipIcon,
   WrenchScrewdriverIcon,
@@ -22,6 +23,7 @@ const slug = cfg.public.adminSlug;
 const nav = [
   { label: "Dashboard", to: `/${slug}`, icon: HomeIcon },
   { label: "Projects", to: `/${slug}/projects`, icon: FolderIcon },
+  { label: "Gallery", to: `/${slug}/gallery`, icon: PhotoIcon },
   { label: "Skills", to: `/${slug}/skills`, icon: BoltIcon },
   { label: "Tech", to: `/${slug}/tech`, icon: CpuChipIcon },
   { label: "Tools", to: `/${slug}/tools`, icon: WrenchScrewdriverIcon },

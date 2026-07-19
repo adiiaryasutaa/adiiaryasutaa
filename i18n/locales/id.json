@@ -4,6 +4,7 @@
     "home": "Beranda",
     "about": "Tentang",
     "project": "Proyek",
+    "gallery": "Galeri",
     "blog": "Blog",
     "friend": "Teman"
   },
@@ -39,6 +40,27 @@
   "friend": {
     "section-title": "Teman"
   },
+  "gallery": {
+    "section-title": "Galeri",
+    "empty": "Belum ada foto di sini.",
+    "lightbox-label": "Penampil foto",
+    "close": "Tutup",
+    "previous": "Foto sebelumnya",
+    "next": "Foto berikutnya",
+    "filter": {
+      "all": "Semua",
+      "volunteer": "Relawan",
+      "work": "Pekerjaan",
+      "competition": "Kompetisi",
+      "other": "Lainnya"
+    },
+    "alt": {
+      "volunteer": "Foto kegiatan relawan",
+      "work": "Foto kegiatan pekerjaan",
+      "competition": "Foto kompetisi",
+      "other": "Foto kegiatan"
+    }
+  },
   "blog": {
     "section-title": "Blog",
     "back": "Blog",
@@ -49,6 +71,7 @@
     "description": "Full-Stack Developer yang berbasis di Bali, Indonesia, berkarya di pengembangan web, mobile, dan game dengan Laravel, Vue, Nuxt, Flutter, dan Unity.",
     "about-description": "Kenali Adi Aryasuta — seorang Full-Stack Developer dengan pengalaman di Vue, Nuxt, Laravel, dan pengembangan mobile.",
     "project-description": "Jelajahi proyek-proyek yang dibangun oleh Adi Aryasuta, dari aplikasi web hingga aplikasi mobile.",
+    "gallery-description": "Foto-foto kegiatan Adi Aryasuta — relawan, pekerjaan, dan kompetisi.",
     "blog-description": "Artikel tentang pengembangan web, Vue, Nuxt, TypeScript, dan rekayasa perangkat lunak oleh Adi Aryasuta.",
     "friend-description": "Teman dan kolega Adi Aryasuta dalam komunitas pengembangan perangkat lunak."
   },

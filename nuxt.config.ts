@@ -53,11 +53,29 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/content",
+    "@nuxt/image",
     "@nuxtjs/i18n",
     "@nuxtjs/color-mode",
     "@nuxtjs/sitemap",
     "nuxt-auth-utils",
   ],
+
+  image: {
+    quality: 80,
+    // The Vercel provider (auto-enabled on Vercel deployments) treats these as the
+    // only valid widths and rounds any other request up to the next one. The
+    // defaults stop at 640, so gallery tiles — ~160-240px — would each fetch a
+    // 640px image. xs/xsm cover the tile sizes at 1x and 2x.
+    screens: {
+      xs: 320,
+      xsm: 480,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      "2xl": 1536,
+    },
+  },
 
   runtimeConfig: {
     sessionPassword: "",

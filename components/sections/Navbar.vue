@@ -80,6 +80,7 @@ onUnmounted(() => {
           <NavbarItem :label="$t('navbar.home')" to="/" />
           <NavbarItem v-if="pages.about" :label="$t('navbar.about')" to="/about" />
           <NavbarItem v-if="pages.project" :label="$t('navbar.project')" to="/project" />
+          <NavbarItem v-if="pages.gallery" :label="$t('navbar.gallery')" to="/gallery" />
           <NavbarItem v-if="pages.blog" :label="$t('navbar.blog')" to="/blog" :partial="true" />
           <NavbarItem v-if="pages.friend" :label="$t('navbar.friend')" to="/friend" />
         </div>

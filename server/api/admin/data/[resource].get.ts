@@ -4,6 +4,7 @@ const ALLOWED = new Set([
   "tech",
   "tool",
   "friend",
+  "gallery",
   "experience/work",
   "experience/education",
   "experience/volunteer",

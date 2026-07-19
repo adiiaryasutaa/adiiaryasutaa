@@ -11,6 +11,7 @@ onMounted(load);
 const pageLabels: { key: keyof PageVisibility; label: string; description: string }[] = [
   { key: "about", label: "About", description: "About me, experience, and tech stack" },
   { key: "project", label: "Projects", description: "Portfolio projects" },
+  { key: "gallery", label: "Gallery", description: "Photos of activities" },
   { key: "blog", label: "Blog", description: "Blog posts and articles" },
   { key: "friend", label: "Friends", description: "Friends and colleagues" },
 ];

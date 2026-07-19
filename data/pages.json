@@ -1,6 +1,7 @@
 {
   "about": true,
   "project": true,
+  "gallery": true,
   "blog": true,
   "friend": true
 }
